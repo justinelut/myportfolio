@@ -12,7 +12,7 @@ interface TypeChildren {
 
 export const SideCard = ({ children }: TypeChildren) => {
   return (
-    <Card className="min-w-[350px] w-full pt-6 items-start">
+    <Card className="min-w-[350px] w-full pt-4 items-start">
       <CardContent>{children}</CardContent>
       <CardFooter className="flex justify-between"></CardFooter>
     </Card>
