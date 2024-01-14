@@ -9,23 +9,18 @@ import Link from "next/link";
 import truncateText from "./truncate";
 
 export const Projects = () => {
-  const linkedindesc = ` My true passion is learning and sharing my knowledge, which is why I
-    started creating Youtube videos about web development, startups, and
-    marketing.
-    My true passion is learning and sharing my knowledge, which is why I
-    started creating Youtube videos about web development, startups, and
-    marketing.`;
+
 
   return (
     <Link href="/">
-      <ContentCard>
+      <ContentCard className="p-2" classContent="p-0">
         <div className="flex flex-row justify-between items-center">
           <div className="text-md font-extrabold">
-            <Icons.linkedin color="green" className="w-14 h-14" />
+            <Icons.gitHub className="w-10 h-10 text-green-500" />
           </div>
           <div className="connect">
             <Link
-              className="bg-green-600 rounded-lg px-4 py-2 text-white text-sm"
+              className="bg-black dark:bg-green-500 font-bold rounded-lg px-4 py-2 text-white text-sm"
               href="linkedin"
             >
               Connect 237

@@ -3,6 +3,7 @@ import { MapPin } from "lucide-react";
 import { ContentCard } from "@/components/contentcard";
 import { SocialCard } from "@/components/socialcard";
 import { FeaturedProject } from "@/components/featuredproject";
+import { Projects } from "@/components/projects";
 
 export default function Home() {
   return (
@@ -10,6 +11,11 @@ export default function Home() {
       <div className="w-full flex flex-col gap-6">
         <SocialCard />
         <FeaturedProject />
+        <div className="flex flex-col gap-3">
+        <h3 className="text-sm mb-2 font-bold">@popular projects</h3>
+        <Projects />
+        <Projects />
+        </div>
       </div>
 
       <div className="flex flex-col w-full">
