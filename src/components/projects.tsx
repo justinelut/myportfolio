@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { MapPin } from "lucide-react";
+import { MapPin, Star } from "lucide-react";
 import { ModeToggle } from "@/components/modetoggle";
 import { MyAvatar } from "@/components/Avatar";
 import { ContentCard } from "@/components/contentcard";
@@ -9,22 +9,17 @@ import Link from "next/link";
 import truncateText from "./truncate";
 
 export const Projects = () => {
-
-
   return (
     <Link href="/">
-      <ContentCard className="p-2" classContent="p-0">
+      <ContentCard className="py-2 px-3" classContent="p-0">
         <div className="flex flex-row justify-between items-center">
-          <div className="text-md font-extrabold">
-            <Icons.gitHub className="w-10 h-10 text-green-500" />
+          <div className="flex gap-4 items-center">
+            <Icons.gitHub className="w-8 h-8 text-green-500" />
+            <h2 className="text-sm">Mpesa pay</h2>
           </div>
-          <div className="connect">
-            <Link
-              className="bg-black dark:bg-green-500 font-bold rounded-lg px-4 py-2 text-white text-sm"
-              href="linkedin"
-            >
-              Connect 237
-            </Link>
+         
+          <div className="flex flex-row items-center gap-2">
+            <p>43</p> <Star size={16}/>
           </div>
         </div>
       </ContentCard>
