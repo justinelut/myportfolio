@@ -7,9 +7,13 @@ import { ContentCard } from "@/components/contentcard";
 import { Icons } from "@/components/icons";
 import Link from "next/link";
 import truncateText from "./truncate";
+import {motion, useScroll, useTransform} from 'framer-motion'
 
 export const Projects = () => {
+  const { scrollYProgress } = useScroll()
+  const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
   return (
+    <motion.div style={{scale}} animate={{transition:{duration: 1, ease: "easeInOut", delay: 1}}} >
     <Link href="/">
       <ContentCard className="py-2 px-3" classContent="p-0">
         <div className="flex flex-row justify-between items-center">
@@ -24,5 +28,6 @@ export const Projects = () => {
         </div>
       </ContentCard>
     </Link>
+    </motion.div>
   );
 };

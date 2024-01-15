@@ -7,6 +7,7 @@ import { ContentCard } from "@/components/contentcard";
 import { Icons } from "@/components/icons";
 import Link from "next/link";
 import truncateText from "./truncate";
+import {motion, useScroll, useTransform} from 'framer-motion'
 
 export const SocialCard = () => {
   const linkedindesc = ` My true passion is learning and sharing my knowledge, which is why I
@@ -16,7 +17,10 @@ export const SocialCard = () => {
     started creating Youtube videos about web development, startups, and
     marketing.`;
 
+ 
+
   return (
+   
     <Link href="/">
       <ContentCard classContent="pt-6">
         <div className="flex flex-row justify-between items-center">
@@ -40,5 +44,6 @@ export const SocialCard = () => {
         </div>
       </ContentCard>
     </Link>
+ 
   );
 };
