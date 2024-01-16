@@ -4,7 +4,6 @@ import {
   ArrowRight,
   BookCheck,
   CircleUser,
-  FolderDot,
   Home,
   MapPin,
   Newspaper,
@@ -19,52 +18,52 @@ import { motion } from "framer-motion";
 
 const links = [
   {
-    link: "/projects",
-    title: "Projects",
-    icon: <FolderDot size={16} />,
+    link: "/",
+    title: "Mastering Responsive Design with Tailwind CSS",
   },
   {
     link: "/contact",
-    title: "Contact",
-    icon: <CircleUser size={16} />,
+    title: "Mastering Responsive Design with Tailwind CSS",
   },
   {
     link: "/blog",
-    title: "Blog",
-    icon: <BookCheck size={16} />,
+    title: "Mastering Responsive Design with Tailwind CSS",
   },
   {
     link: "/resume",
-    title: "Resume",
-    icon: <NotepadText size={16} />,
+    title: "Mastering Responsive Design with Tailwind CSS",
   },
   {
     link: "/certification",
-    title: "Certification",
-    icon: <ShieldCheck size={16} />,
+    title: "Mastering Responsive Design with Tailwind CSS",
   },
+  {
+    link: "/blog",
+    title: "Mastering Responsive Design with Tailwind CSS",
+  },
+  {
+    link: "/resume",
+    title: "Mastering Responsive Design with Tailwind CSS",
+  },
+  {
+    link: "/certification",
+    title: "Mastering Responsive Design with Tailwind CSS",
+  },
+  {
+    link: "/blog",
+    title: "Mastering Responsive Design with Tailwind CSS",
+  },
+  {
+    link: "/resume",
+    title: "Mastering Responsive Design with Tailwind CSS sdggsdsgdsgdgdgd",
+  },
+  
+ 
 ];
 
-export const MenuCard = () => {
+export const LatestBlog = () => {
   return (
-    <ContentCard className="p-4 pb-0 mb-0 ring-2 shadow-sm shadow-green-500 hover:border-red-500 border-opacity-70 hover:ring-red-500 hover:shadow-lg hover:shadow-red-500 hover:border-opacity-85 transition duration-300">
-      <div className="flex flex-row justify-between">
-        <Link href="/">
-          <motion.div
-            initial={{ opacity: 1 }}
-            whileHover={{
-              scale: 1.02,
-              transition: { duration: 0.3 },
-            }}
-            exit={{ opacity: 1, transition: { duration: 0.2 } }}
-            className="rounded-full px-2 py-2 bg-red-500 font-bold"
-          >
-            <Home size={16} />
-          </motion.div>
-        </Link>
-
-        <ModeToggle />
-      </div>
+    <>
       {links.map((link, index) => (
         <motion.div
           initial={{ opacity: 1 }}
@@ -76,11 +75,11 @@ export const MenuCard = () => {
         >
           <Link href={link.link} key={index}>
             <div className="flex flex-row justify-between items-center py-4 border-b hover:border-b-red-600 transition duration-300">
-              <div className="flex flex-row gap-2 items-center">
+              <div className="flex flex-row gap-2 items-center w-full">
                 <h2 className="rounded-full px-2 py-2 bg-red-500 font-bold">
-                  {link.icon}
+                  0{index +1}
                 </h2>
-                <Link href={link.link}>{link.title}</Link>
+                <Link href="/resume" className="truncate">{link.title}</Link>
               </div>
 
               <div className="">
@@ -90,6 +89,6 @@ export const MenuCard = () => {
           </Link>
         </motion.div>
       ))}
-    </ContentCard>
+    </>
   );
 };

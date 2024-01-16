@@ -20,8 +20,8 @@ export const Projects = ({ githubstars, projecttitle, githublink }: props) => {
   const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
   return (
     <motion.div
-      style={{ scale }}
-      animate={{ transition: { duration: 1, ease: "easeInOut", delay: 1 } }}
+     
+      
     >
       <Link href={`${githublink}`}>
         <ContentCard className="py-2 px-3" classContent="p-0">
