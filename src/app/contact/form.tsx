@@ -16,8 +16,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { SendEmail } from "@/app/actions/sendemail";
 
-const formSchema = z.object({
+export const formSchema = z.object({
   fullnames: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
@@ -52,7 +53,7 @@ export function ContanctForm() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullnames: "",
-      phonenumber: '',
+      phonenumber: "",
       email: "",
       website: "",
       organization: "",
@@ -61,15 +62,16 @@ export function ContanctForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  function onSubmit(values: any) {
+    SendEmail(values);
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 font-playfair">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-4 font-playfair"
+      >
         <FormField
           control={form.control}
           name="fullnames"
@@ -155,13 +157,19 @@ export function ContanctForm() {
             <FormItem>
               <FormLabel>Description</FormLabel>
               <FormControl>
-                <Textarea placeholder="I want to work with you on a certain webapp which lets user ...." {...field} />
+                <Textarea
+                  placeholder="I want to work with you on a certain webapp which lets user ...."
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full sticky bottom-0 bg-green-500">
+        <Button
+          type="submit"
+          className="w-full sticky bottom-0 text-md bg-green-500"
+        >
           Submit
         </Button>
       </form>
