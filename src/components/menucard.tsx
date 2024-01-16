@@ -6,16 +6,16 @@ import {
   CircleUser,
   FolderDot,
   Home,
-  MapPin,
-  Newspaper,
   NotepadText,
   ShieldCheck,
 } from "lucide-react";
 import { ModeToggle } from "@/components/modetoggle";
-import { MyAvatar } from "@/components/Avatar";
 import { ContentCard } from "@/components/contentcard";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+
+
 
 const links = [
   {
@@ -46,8 +46,11 @@ const links = [
 ];
 
 export const MenuCard = () => {
+  const pathname = usePathname()
+
+ 
   return (
-    <ContentCard className="p-4 pb-0 mb-0 ring-2 shadow-sm shadow-green-500 hover:border-red-500 border-opacity-70 hover:ring-red-500 hover:shadow-lg hover:shadow-red-500 hover:border-opacity-85 transition duration-300">
+    <ContentCard className={`p-4 pb-0 mb-0 ring-2 shadow-sm shadow-green-500 hover:border-red-500 border-opacity-70 hover:ring-red-500 hover:shadow-lg hover:shadow-red-500 hover:border-opacity-85 transition duration-300`}>
       <div className="flex flex-row justify-between">
         <Link href="/">
           <motion.div
@@ -76,7 +79,7 @@ export const MenuCard = () => {
           key={index}
         >
           <Link href={link.link}>
-            <div className="flex flex-row justify-between items-center py-4 border-b hover:border-b-red-600 transition duration-300">
+            <div className={`flex flex-row justify-between items-center py-4 border-b hover:border-b-red-600 transition duration-300 ${pathname == link.link ? 'border-b-red-600' : ''}`}>
               <div className="flex flex-row gap-2 items-center">
                 <h2 className="rounded-full px-2 py-2 bg-red-500 font-bold">
                   {link.icon}
@@ -85,7 +88,7 @@ export const MenuCard = () => {
               </div>
 
               <div className="">
-                <ArrowRight className="hover:text-red-500" />
+                <ArrowRight />
               </div>
             </div>
           </Link>

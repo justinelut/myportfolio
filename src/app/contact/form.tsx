@@ -18,6 +18,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { SendEmail } from "@/app/actions/sendemail";
 import { useFormStatus } from "react-dom";
+import Navigation from "@/components/navigation";
+import { ProfileCard } from "@/components/profilecard";
+import { MenuCard } from "@/components/menucard";
 
 export const formSchema = z.object({
   fullnames: z.string().min(2, {
@@ -80,11 +83,15 @@ export function ContanctForm() {
   }
 
   return (
+ 
+   
     <Form {...form}>
+   
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-4 font-playfair"
       >
+         <h3 className='text-4xl font-playfair font-extrabold mb-4'>Contact Me</h3>
         <FormField
           control={form.control}
           name="fullnames"
@@ -182,5 +189,6 @@ export function ContanctForm() {
         <SubmitButton />
       </form>
     </Form>
+   
   );
 }
