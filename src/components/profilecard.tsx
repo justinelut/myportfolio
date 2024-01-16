@@ -6,7 +6,7 @@ import { ContentCard } from "@/components/contentcard";
 
 export const ProfileCard = () => {
   return (
-    <ContentCard className="pt-6">
+    <ContentCard className="pt-6 font-playfair">
       <MyAvatar image="https://github.com/shadcn.png" />
       <h3 className="text-md font-extrabold mt-6">Frontend Web Developer</h3>
       <h2 className="text-2xl font-extrabold mt-4">Justine Gichana</h2>

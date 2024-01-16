@@ -5,7 +5,7 @@ import { Star } from "lucide-react";
 
 export default function Skills() {
   return (
-    <div className="flex flex-col gap-6 bg-blue-300 p-4 rounded-lg">
+    <div className="flex flex-col gap-6 rounded-lg">
       <div className="grid grid-cols-2 gap-4">
         <ContentCard classContent="pt-4" className="min-w-200">
           <div className="flex flex-col">

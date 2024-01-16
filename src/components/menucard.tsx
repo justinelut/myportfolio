@@ -73,8 +73,9 @@ export const MenuCard = () => {
             transition: { duration: 0.3 },
           }}
           exit={{ opacity: 1, transition: { duration: 0.2 } }}
+          key={index}
         >
-          <Link href={link.link} key={index}>
+          <Link href={link.link}>
             <div className="flex flex-row justify-between items-center py-4 border-b hover:border-b-red-600 transition duration-300">
               <div className="flex flex-row gap-2 items-center">
                 <h2 className="rounded-full px-2 py-2 bg-red-500 font-bold">
