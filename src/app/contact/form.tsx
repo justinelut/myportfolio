@@ -161,7 +161,7 @@ export function ContanctForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full sticky bottom-0">
+        <Button type="submit" className="w-full sticky bottom-0 bg-green-500">
           Submit
         </Button>
       </form>
