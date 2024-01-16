@@ -16,9 +16,7 @@ import {
 import * as React from "react";
 import { z } from "zod";
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
+
 
 export const ContactTemplate = (userdetails: z.infer<typeof formSchema>) => (
   <Html>
@@ -37,85 +35,13 @@ export const ContactTemplate = (userdetails: z.infer<typeof formSchema>) => (
           <Text style={paragraph}>{userdetails.phonenumber}</Text>
           <Text style={paragraph}>{userdetails.website}</Text>
         </Section>
-        <Section style={paragraphList}>
-          <Text style={paragraph}>
-            We’re noting exceptions to the{" "}
-            <Link href="https://notifications.google.com" style={link}>
-              Target API Level policy
-            </Link>
-            , which can be found in our updated{" "}
-            <Link href="https://notifications.google.com" style={link}>
-              Help Center article.
-            </Link>
-            These exceptions include permanently private apps and apps that
-            target automotive or wearables form factors and are bundled within
-            the same package.{" "}
-            <Link href="https://notifications.google.com" style={link}>
-              Learn more
-            </Link>
-          </Text>
-        </Section>
-        <Section style={paragraphContent}>
-          <Text style={paragraph}>
-            We’re also extending the deadline to give you more time to adjust to
-            these changes. Now, apps that target API level 29 or below will
-            start experiencing reduced distribution starting <b>Jan 31, 2023</b>{" "}
-            instead of Nov 1, 2022. If you need more time to update your app,
-            you can request an extension to keep your app discoverable to all
-            users until May 1, 2023.
-          </Text>
-          <Hr style={hr} />
-        </Section>
-
+       
+      
         <Section style={paragraphContent}>
           <Text style={paragraph}>Thank you,</Text>
           <Text style={{ ...paragraph, fontSize: "20px" }}>
-            The Google Play team
+            {userdetails.organization}
           </Text>
-        </Section>
-
-        <Section style={containerContact}>
-          <Text style={paragraph}>Connect with us</Text>
-          <Row
-            align="left"
-            style={{
-              width: "84px",
-              float: "left",
-            }}
-          >
-            <Column style={{ paddingRight: "4px" }}>
-              <Link href="https://notifications.google.com">
-                <Img
-                  width="28"
-                  height="28"
-                  src={`${baseUrl}/static/google-play-chat.png`}
-                />
-              </Link>
-            </Column>
-            <Column style={{ paddingRight: "4px" }}>
-              <Link href="https://notifications.google.com">
-                <Img
-                  width="28"
-                  height="28"
-                  src={`${baseUrl}/static/google-play-icon.png`}
-                />
-              </Link>
-            </Column>
-            <Column style={{ paddingRight: "4px" }}>
-              <Link href="https://notifications.google.com">
-                <Img
-                  width="28"
-                  height="28"
-                  src={`${baseUrl}/static/google-play-academy.png`}
-                />
-              </Link>
-            </Column>
-          </Row>
-          <Img
-            width="540"
-            height="48"
-            src={`${baseUrl}/static/google-play-footer.png`}
-          />
         </Section>
 
         <Section style={{ ...paragraphContent, paddingBottom: 30 }}>
@@ -127,8 +53,8 @@ export const ContactTemplate = (userdetails: z.infer<typeof formSchema>) => (
               margin: 0,
             }}
           >
-            © 2022 Google LLC 1600 Amphitheatre Parkway, Mountain View, CA
-            94043, USA
+            © 2023 Pixelayout LLC 20122 Lanet Works, Lake View, NA
+            20100, Kenya
           </Text>
           <Text
             style={{
@@ -138,9 +64,8 @@ export const ContactTemplate = (userdetails: z.infer<typeof formSchema>) => (
               margin: 0,
             }}
           >
-            You have received this mandatory email service announcement to
-            update you about important changes to your Google Play Developer
-            account.
+            You have received this improtant email from  <a href="https://me.pixelayout.site">Me. Pixelayout</a>
+            Please respond to it as soon as possible as it maybe a client looking to work with you.
           </Text>
         </Section>
       </Container>
