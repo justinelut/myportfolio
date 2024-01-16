@@ -3,6 +3,7 @@ import { ContanctForm } from "@/app/contact/form";
 import Navigation from "@/components/navigation";
 import { ProfileCard } from "@/components/profilecard";
 import { MenuCard } from "@/components/menucard";
+import { MobileMenu } from "@/components/mobilemenu";
 
 export default function page() {
   return (

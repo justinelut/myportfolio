@@ -19,17 +19,19 @@ import { MenuCard } from "@/components/menucard";
 
 export default async function Home() {
   const projectdata = await pb.collection("Projects").getList(1, 4);
-  
 
   return (
     <>
-      <div className="grid-cols-1 sm:grid-cols-1 md:grid-cols-2 grid lg:grid-cols-3 items-start gap-6 w-full mx-auto container py-10">
+      <div className="grid-cols-1 sm:grid-cols-1 md:grid-cols-2 grid lg:grid-cols-3 items-start gap-6 w-full py-10 px-2 lg:mx-auto lg:container md:mx-auto md:container">
         <Navigation>
           <div className="flex flex-col gap-4">
             <ProfileCard />
-            <MenuCard />
+            <div className="hidden md:block lg:block">
+              <MenuCard />
+            </div>
           </div>
         </Navigation>
+
         <div className="w-full flex flex-col gap-6">
           <LinkedinSocial />
           <FeaturedProject />
@@ -49,8 +51,8 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6">
-          <div className="grid grid-cols-2 w-full gap-4 items-start">
+        <div className="flex flex-col gap-6 w-full">
+          <div className="grid grid-cols-2 gap-4">
             <Discord />
             <Github />
           </div>

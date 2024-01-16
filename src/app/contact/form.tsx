@@ -17,10 +17,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { SendEmail } from "@/app/actions/sendemail";
-import { useFormStatus } from "react-dom";
 import Navigation from "@/components/navigation";
 import { ProfileCard } from "@/components/profilecard";
 import { MenuCard } from "@/components/menucard";
+import { useState } from "react";
 
 export const formSchema = z.object({
   fullnames: z.string().min(2, {
@@ -52,18 +52,6 @@ export const formSchema = z.object({
   }),
 });
 
-export const SubmitButton = () => {
-  const { pending } = useFormStatus();
-  return (
-    <Button
-      type="submit"
-      className="w-full sticky bottom-0 text-md bg-green-500"
-      disabled={pending}
-    >
-      {pending ? "Submitting..." : "Submit"}
-    </Button>
-  );
-};
 export function ContanctForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -77,21 +65,23 @@ export function ContanctForm() {
       description: "",
     },
   });
+  const [submitting, setSubmitting] = useState(false);
 
   function onSubmit(values: any) {
-    // SendEmail(values);
+    setSubmitting(true);
+    SendEmail(values);
+    setSubmitting(false)
   }
 
   return (
- 
-   
     <Form {...form}>
-   
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-4 font-playfair"
       >
-         <h3 className='text-4xl font-playfair font-extrabold mb-4'>Contact Me</h3>
+        <h3 className="text-4xl font-playfair font-extrabold mb-4">
+          Contact Me
+        </h3>
         <FormField
           control={form.control}
           name="fullnames"
@@ -186,9 +176,14 @@ export function ContanctForm() {
             </FormItem>
           )}
         />
-        <SubmitButton />
+        <Button
+          type="submit"
+          className="w-full sticky bottom-8 text-md bg-green-500"
+          disabled={submitting}
+        >
+          {submitting ? "Submitting..." : "Submit"}
+        </Button>
       </form>
     </Form>
-   
   );
 }

@@ -13,7 +13,7 @@ export const ContentCard = ({
   children,
 }: TypeChildren) => {
   return (
-    <Card className={cn("min-w-[350px] w-full items-start", className)}>
+    <Card className={cn("lg:min-w-[350px] md:lg:min-w-[350px] w-full items-start", className)}>
       <CardContent className={cn(classContent)}>{children}</CardContent>
     </Card>
   );

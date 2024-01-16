@@ -7,6 +7,7 @@ import { ProfileCard } from "@/components/profilecard";
 import { MenuCard } from "@/components/menucard";
 import Navigation from "@/components/navigation";
 import { AnimatePresence } from "framer-motion";
+import { MobileMenu } from "@/components/mobilemenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,9 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <div className="block sm:hidden md:hidden lg:hidden sticky bottom-4 w-full p-2 z-20">
+              <MobileMenu />
+            </div>
           </ThemeProvider>
         </AnimatePresence>
       </body>

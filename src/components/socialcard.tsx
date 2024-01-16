@@ -90,7 +90,7 @@ export const XSocial = () => {
 
 export const Discord = () => {
   return (
-    <ContentCard classContent="pt-4" className="min-w-200">
+    <ContentCard classContent="pt-4" className="lg:min-w-[200px] md:min-w-[200px]">
       <div className="flex flex-col">
         <div className="text-md font-extrabold">
           <Icons.discord className="w-14 h-14 text-blue-600" />
@@ -109,7 +109,7 @@ export const Discord = () => {
 
 export const Github = () => {
   return (
-    <ContentCard classContent="pt-4" className="min-w-200">
+    <ContentCard classContent="pt-4" className="lg:min-w-[200px] md:min-w-[200px]">
       <div className="flex flex-col">
         <div className="text-md font-extrabold">
           <Icons.gitHub className="w-14 h-14" />
