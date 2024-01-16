@@ -85,7 +85,7 @@ export const MenuCard = () => {
               </div>
 
               <div className="">
-                <ArrowRight />
+                <ArrowRight className="hover:text-red-500" />
               </div>
             </div>
           </Link>

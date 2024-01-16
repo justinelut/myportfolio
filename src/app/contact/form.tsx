@@ -17,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { SendEmail } from "@/app/actions/sendemail";
+import { useFormStatus } from "react-dom";
 
 export const formSchema = z.object({
   fullnames: z.string().min(2, {
@@ -48,6 +49,18 @@ export const formSchema = z.object({
   }),
 });
 
+export const SubmitButton = () => {
+  const { pending } = useFormStatus();
+  return (
+    <Button
+      type="submit"
+      className="w-full sticky bottom-0 text-md bg-green-500"
+      disabled={pending}
+    >
+      {pending ? "Submitting..." : "Submit"}
+    </Button>
+  );
+};
 export function ContanctForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -63,7 +76,7 @@ export function ContanctForm() {
   });
 
   function onSubmit(values: any) {
-    SendEmail(values);
+    // SendEmail(values);
   }
 
   return (
@@ -166,12 +179,7 @@ export function ContanctForm() {
             </FormItem>
           )}
         />
-        <Button
-          type="submit"
-          className="w-full sticky bottom-0 text-md bg-green-500"
-        >
-          Submit
-        </Button>
+        <SubmitButton />
       </form>
     </Form>
   );

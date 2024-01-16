@@ -6,41 +6,41 @@ import {
   Head,
   Hr,
   Html,
-  Img,
-  Link,
   Preview,
-  Row,
   Section,
   Text,
 } from "@react-email/components";
 import * as React from "react";
 import { z } from "zod";
 
-
-
 export const ContactTemplate = (userdetails: z.infer<typeof formSchema>) => (
   <Html>
     <Head />
-    <Preview>Google Play developers</Preview>
+    <Preview>{userdetails.location}</Preview>
     <Body style={main}>
       <Container style={container}>
         <Section style={paragraphContent}>
+          <Column>
+            <Text style={{ ...paragraph, fontSize: "20px" }}>
+              Me. Pixelayout
+            </Text>
+          </Column>
+        </Section>
+        <Section style={paragraphContent}>
           <Hr style={hr} />
-          <Text style={heading}>Me. Pixelayout</Text>
+          <Text style={heading}>{userdetails.organization}</Text>
           <Text style={paragraph}>{userdetails.fullnames}</Text>
           <Text style={paragraph}>{userdetails.email}</Text>
           <Text style={paragraph}>{userdetails.description}</Text>
           <Text style={paragraph}>{userdetails.location}</Text>
-          <Text style={paragraph}>{userdetails.organization}</Text>
           <Text style={paragraph}>{userdetails.phonenumber}</Text>
           <Text style={paragraph}>{userdetails.website}</Text>
         </Section>
-       
-      
+
         <Section style={paragraphContent}>
           <Text style={paragraph}>Thank you,</Text>
           <Text style={{ ...paragraph, fontSize: "20px" }}>
-            {userdetails.organization}
+            {userdetails.fullnames}
           </Text>
         </Section>
 
@@ -53,8 +53,7 @@ export const ContactTemplate = (userdetails: z.infer<typeof formSchema>) => (
               margin: 0,
             }}
           >
-            © 2023 Pixelayout LLC 20122 Lanet Works, Lake View, NA
-            20100, Kenya
+            © 2023 Pixelayout LLC 20122 Lanet Works, Lake View, NA 20100, Kenya
           </Text>
           <Text
             style={{
@@ -64,8 +63,10 @@ export const ContactTemplate = (userdetails: z.infer<typeof formSchema>) => (
               margin: 0,
             }}
           >
-            You have received this improtant email from  <a href="https://me.pixelayout.site">Me. Pixelayout</a>
-            Please respond to it as soon as possible as it maybe a client looking to work with you.
+            You have received this improtant email from{" "}
+            <a href="https://me.pixelayout.site">Me. Pixelayout</a>
+            Please respond to it as soon as possible as it maybe a client
+            looking to work with you.
           </Text>
         </Section>
       </Container>
