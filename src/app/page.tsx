@@ -1,6 +1,3 @@
-import { MyAvatar } from "@/components/Avatar";
-import { MapPin } from "lucide-react";
-import { ContentCard } from "@/components/contentcard";
 import {
   Discord,
   Github,
@@ -15,7 +12,7 @@ import { Suspense } from "react";
 import Skills from "@/components/skills";
 import Navigation from "@/components/navigation";
 import { ProfileCard } from "@/components/profilecard";
-import { MenuCard } from "@/components/menucard";
+
 
 export default async function Home() {
   const projectdata = await pb.collection("Projects").getList(1, 4);
@@ -27,7 +24,7 @@ export default async function Home() {
           <div className="flex flex-col gap-4">
             <ProfileCard />
             <div className="hidden md:block lg:block">
-              <MenuCard />
+             featured blogs
             </div>
           </div>
         </Navigation>
