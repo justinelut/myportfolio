@@ -23,7 +23,7 @@ import { MenuCard } from "@/components/menucard";
 import { useState } from "react";
 import { CardContent } from "@/components/ui/card";
 import { ContentCard } from "@/components/contentcard";
-
+import { motion } from "framer-motion";
 export const formSchema = z.object({
   fullnames: z.string().min(2, {
     message: "Username must be at least 2 characters.",
@@ -85,8 +85,8 @@ export function ContanctForm() {
           Contact Me
         </h3>
 
-        <div className="grid grid-cols-2 gap-4">
-       <ContentCard className="pt-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-4">
+          <ContentCard className="pt-4">
             <FormField
               control={form.control}
               name="fullnames"
@@ -95,7 +95,7 @@ export function ContanctForm() {
                   <FormLabel>Full Names</FormLabel>
                   <FormControl>
                     <Input
-                      className="rounded-full p-6"
+                      className="rounded-full p-6 transition-transform ease-out duration-300 delay-200 transform focus-visible:scale-110"
                       placeholder="Justine Doe"
                       {...field}
                     />
@@ -112,7 +112,9 @@ export function ContanctForm() {
                   <FormLabel>Phone Number</FormLabel>
                   <FormControl>
                     <Input
-                      className="rounded-full p-6"
+                     
+                     
+                      className="rounded-full p-6 transition-transform ease-out duration-300 delay-200 transform focus-visible:scale-110"
                       placeholder="254740455200"
                       {...field}
                     />
@@ -122,7 +124,7 @@ export function ContanctForm() {
               )}
             />
           </ContentCard>
-       <ContentCard className="pt-4">
+          <ContentCard className="pt-4">
             <FormField
               control={form.control}
               name="email"
@@ -131,7 +133,7 @@ export function ContanctForm() {
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input
-                      className="rounded-full p-6"
+                      className="rounded-full p-6 transition-transform ease-out duration-300 delay-200 transform focus-visible:scale-110"
                       placeholder="justinequartz@pixelayout.com"
                       {...field}
                     />
@@ -148,7 +150,7 @@ export function ContanctForm() {
                   <FormLabel>Website</FormLabel>
                   <FormControl>
                     <Input
-                      className="rounded-full p-6"
+                      className="rounded-full p-6 transition-transform ease-out duration-300 delay-200 transform focus-visible:scale-110"
                       placeholder="https://pixelayout.site"
                       {...field}
                     />
@@ -159,7 +161,7 @@ export function ContanctForm() {
             />
           </ContentCard>
 
-       <ContentCard className="pt-4">
+          <ContentCard className="pt-4">
             <FormField
               control={form.control}
               name="organization"
@@ -168,7 +170,7 @@ export function ContanctForm() {
                   <FormLabel>Organization</FormLabel>
                   <FormControl>
                     <Input
-                      className="rounded-full p-6"
+                      className="rounded-full p-6 transition-transform ease-out duration-300 delay-200 transform focus-visible:scale-110"
                       placeholder="Pixel Layout"
                       {...field}
                     />
@@ -178,7 +180,7 @@ export function ContanctForm() {
               )}
             />
           </ContentCard>
-       <ContentCard className="pt-4">
+          <ContentCard className="pt-4">
             <FormField
               control={form.control}
               name="location"
@@ -187,7 +189,7 @@ export function ContanctForm() {
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input
-                      className="rounded-full p-6"
+                      className="rounded-full p-6 transition-transform ease-out duration-300 delay-200 transform focus-visible:scale-110"
                       placeholder="Nakuru - Kenya"
                       {...field}
                     />
@@ -208,7 +210,7 @@ export function ContanctForm() {
                     <Textarea
                       placeholder="I want to work with you on a certain webapp which lets user ...."
                       {...field}
-                      className="min-h-20"
+                      className="min-h-20 transition-transform ease-out duration-300 delay-200 transform focus-visible:scale-110"
                     />
                   </FormControl>
                   <FormMessage />

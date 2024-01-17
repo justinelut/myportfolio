@@ -11,7 +11,7 @@ export default function page() {
       <div className="hidden md:block lg:block col-span-1">
         <Navigation>
           <div className="flex flex-col gap-4">
-            <ProfileCard />
+            <div className="hidden"><ProfileCard /></div>
             <MenuCard />
           </div>
         </Navigation>
