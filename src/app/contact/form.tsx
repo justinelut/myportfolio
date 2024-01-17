@@ -21,6 +21,8 @@ import Navigation from "@/components/navigation";
 import { ProfileCard } from "@/components/profilecard";
 import { MenuCard } from "@/components/menucard";
 import { useState } from "react";
+import { CardContent } from "@/components/ui/card";
+import { ContentCard } from "@/components/contentcard";
 
 export const formSchema = z.object({
   fullnames: z.string().min(2, {
@@ -70,7 +72,7 @@ export function ContanctForm() {
   function onSubmit(values: any) {
     setSubmitting(true);
     SendEmail(values);
-    setSubmitting(false)
+    setSubmitting(false);
   }
 
   return (
@@ -82,103 +84,146 @@ export function ContanctForm() {
         <h3 className="text-4xl font-playfair font-extrabold mb-4">
           Contact Me
         </h3>
-        <FormField
-          control={form.control}
-          name="fullnames"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Full Names</FormLabel>
-              <FormControl>
-                <Input placeholder="Justine Doe" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="phonenumber"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone Number</FormLabel>
-              <FormControl>
-                <Input placeholder="254740455200" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input placeholder="justinequartz@pixelayout.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="website"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Website</FormLabel>
-              <FormControl>
-                <Input placeholder="https://pixelayout.site" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="organization"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Organization</FormLabel>
-              <FormControl>
-                <Input placeholder="Pixel Layout" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="location"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Location</FormLabel>
-              <FormControl>
-                <Input placeholder="Nakuru - Kenya" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="description"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Description</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="I want to work with you on a certain webapp which lets user ...."
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+
+        <div className="grid grid-cols-2 gap-4">
+       <ContentCard className="pt-4">
+            <FormField
+              control={form.control}
+              name="fullnames"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Full Names</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="rounded-full p-6"
+                      placeholder="Justine Doe"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phonenumber"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone Number</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="rounded-full p-6"
+                      placeholder="254740455200"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </ContentCard>
+       <ContentCard className="pt-4">
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="rounded-full p-6"
+                      placeholder="justinequartz@pixelayout.com"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="website"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Website</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="rounded-full p-6"
+                      placeholder="https://pixelayout.site"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </ContentCard>
+
+       <ContentCard className="pt-4">
+            <FormField
+              control={form.control}
+              name="organization"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Organization</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="rounded-full p-6"
+                      placeholder="Pixel Layout"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </ContentCard>
+       <ContentCard className="pt-4">
+            <FormField
+              control={form.control}
+              name="location"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Location</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="rounded-full p-6"
+                      placeholder="Nakuru - Kenya"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </ContentCard>
+          <ContentCard className="pt-4">
+            <FormField
+              control={form.control}
+              name="description"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Description</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="I want to work with you on a certain webapp which lets user ...."
+                      {...field}
+                      className="min-h-20"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </ContentCard>
+          <ContentCard className="bg-slate-800 ring-green-500">
+            <div className="flex p-20 rounded-lg">dfgdfg</div>
+          </ContentCard>
+        </div>
+
         <Button
           type="submit"
-          className="w-full sticky bottom-8 text-md bg-green-500"
+          className="w-full sticky bottom-0 text-md bg-green-500"
           disabled={submitting}
         >
           {submitting ? "Submitting..." : "Submit"}
