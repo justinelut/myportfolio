@@ -2,9 +2,8 @@
 
 export default function page() {
   return (
-    <>
-    <div className="absolute top-0 left-0 w-full h-full bg-red-400"> </div>
-    <div className="bg-stone-50 container mx-auto h-dvh">
+  
+    <div className="container mx-auto h-dvh">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
         <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-0">
           <span className="flex flex-col my-auto pb-2.5 max-md:max-w-full max-md:mt-10">
@@ -124,7 +123,7 @@ export default function page() {
         </div>
       </div>
     </div>
-    </>
+ 
   );
 }
 
