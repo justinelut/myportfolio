@@ -1,62 +1,47 @@
-import {
-  Discord,
-  Github,
-  LinkedinSocial,
-  XSocial,
-} from "@/components/socialcard";
-import { FeaturedProject } from "@/components/featuredproject";
-import { Projects } from "@/components/projects";
-import { pb } from "@/lib/api";
-import { Loading } from "@/components/loading";
-import { Suspense } from "react";
-import Skills from "@/components/skills";
-import Navigation from "@/components/navigation";
-import { ProfileCard } from "@/components/profilecard";
+import { ModeToggle } from "@/components/modetoggle";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import * as React from "react";
 
-
-export default async function Home() {
-  const projectdata = await pb.collection("Projects").getList(1, 4);
-
+export default function page() {
   return (
     <>
-      <div className="grid-cols-1 sm:grid-cols-1 md:grid-cols-2 grid lg:grid-cols-3 items-start gap-6 w-full py-10 px-2 lg:mx-auto lg:container md:mx-auto md:container">
-        <Navigation>
-          <div className="flex flex-col gap-4">
-            <ProfileCard />
-            <div className="hidden md:block lg:block">
-             featured blogs
-            </div>
+    <div className="container mx-auto flex justify-end items-center mt-10">
+        <ModeToggle />
+    </div>
+    <div className="items-center flex flex-col justify-center px-16 py-12 max-md:px-5">
+      <span className="flex w-full max-w-[960px] flex-col mt-8 mb-16 items-start max-md:max-w-full max-md:mb-10">
+        <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
+          <div className="text-3xl self-stretch grow whitespace-nowrap">
+            My Portfolio Preview
           </div>
-        </Navigation>
-
-        <div className="w-full flex flex-col gap-6">
-          <LinkedinSocial />
-          <FeaturedProject />
-          <div className="flex flex-col gap-3">
-            <h3 className="text-sm mb-1 font-bold">@popular projects</h3>
-
-            <Suspense fallback={<Loading />}>
-              {projectdata.items.map((item, index) => (
-                <Projects
-                  key={index}
-                  githublink={item.githublink}
-                  githubstars={item.githubstars}
-                  projecttitle={item.projecttitle}
-                />
-              ))}
-            </Suspense>
-          </div>
+          <div className="bg-black dark:bg-white w-20 shrink-0 h-0.5 my-auto" />
+          <div className="text-3xl self-stretch whitespace-nowrap">2024</div>
+        </span>
+        <div className="self-stretch text-7xl mt-32 max-md:max-w-full max-md:text-4xl max-md:mt-10">
+          Justine Gichana
+        </div>
+        <div className="self-stretch text-5xl mt-6 max-md:max-w-full max-md:text-4xl">
+          Frontend Developer
         </div>
 
-        <div className="flex flex-col gap-6 w-full">
-          <div className="grid grid-cols-2 gap-4">
-            <Discord />
-            <Github />
-          </div>
-          <XSocial />
-          <Skills />
+        <Link
+          href={"/intro"}
+          className="items-center text-xl mt-10 px-6 py-2 dark:bg-white rounded-xl dark:text-black text-white font-extrabold bg-black grow flex justify-between gap-4"
+        >
+          <span>Start</span>
+          <span>
+            <ArrowRight />
+          </span>
+        </Link>
+      </span>
+      <div className="text-2xl leading-8 w-[352px] max-w-full mt-0 self-end max-md:mt-0">
+          Press the N key or your keyboard arrow keys to move to the next frame
         </div>
-      </div>
+        <div className="text-base leading-6 mt-2 self-end">
+          (Shift + N to go backwards)
+        </div>
+    </div>
     </>
   );
 }

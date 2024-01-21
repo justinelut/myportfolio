@@ -20,18 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AnimatePresence>
+        <AnimatePresence mode="wait" initial={false}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-            <TopNav />
             {children}
-            <div className="block sm:hidden md:hidden lg:hidden sticky bottom-4 w-full p-2 z-20">
-              <MobileMenu />
-            </div>
           </ThemeProvider>
         </AnimatePresence>
       </body>
