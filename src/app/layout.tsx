@@ -9,6 +9,9 @@ import Navigation from "@/components/navigation";
 import { AnimatePresence } from "framer-motion";
 import { MobileMenu } from "@/components/mobilemenu";
 import TopNav from "@/components/header/topnav";
+import { ModeToggle } from "@/components/modetoggle";
+import { Menu } from "lucide-react";
+import MenuSheet from "@/app/menumodal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +20,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const openOverlay = () => {
+    console.log("Opening modal");
+  };
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -27,6 +34,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <MenuSheet />
+            
             {children}
           </ThemeProvider>
         </AnimatePresence>

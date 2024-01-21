@@ -6,9 +6,7 @@ import * as React from "react";
 export default function page() {
   return (
     <>
-    <div className="container mx-auto flex justify-end items-center mt-10">
-        <ModeToggle />
-    </div>
+   
     <div className="items-center flex flex-col justify-center px-16 py-12 max-md:px-5">
       <span className="flex w-full max-w-[960px] flex-col mt-8 mb-16 items-start max-md:max-w-full max-md:mb-10">
         <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
@@ -30,6 +28,15 @@ export default function page() {
           className="items-center text-xl mt-10 px-6 py-2 dark:bg-white rounded-xl dark:text-black text-white font-extrabold bg-black grow flex justify-between gap-4"
         >
           <span>Start</span>
+          <span>
+            <ArrowRight />
+          </span>
+        </Link>
+        <Link
+          href={"/contact"}
+          className="items-center text-xl mt-10 px-6 py-2 dark:bg-white rounded-xl dark:text-black text-white font-extrabold bg-black grow flex justify-between gap-4"
+        >
+          <span>Contact</span>
           <span>
             <ArrowRight />
           </span>
