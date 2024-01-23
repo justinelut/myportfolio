@@ -24,22 +24,8 @@ export default function Skills() {
             </div>
           </div>
         </ContentCard>
-        <ContentCard classContent="pt-4" className="lg:min-w-[200px] md:min-w-[200px]">
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2 justify-between">
-              <h3>Javascript</h3>
-              <Icons.javascript className="w-10 h-10" />
-            </div>
-          </div>
-        </ContentCard>
-        <ContentCard classContent="pt-4" className="lg:min-w-[200px] md:min-w-[200px]">
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2 justify-between">
-              <h3>Javascript</h3>
-              <Icons.javascript className="w-10 h-10" />
-            </div>
-          </div>
-        </ContentCard>
+       
+      
       </div>
 
       <div className="grid grid-cols-2 gap-4">
