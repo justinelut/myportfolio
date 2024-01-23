@@ -18,7 +18,7 @@ export const ProfileCard = () => {
           </span>{" "}
           <span>Nakuru, Kenya</span>
         </div>
-        <div className="border p-2 rounded-lg">Contact Me </div>
+        <div className="border rounded-lg bg-green-500 px-3 py-2">Contact Me </div>
         <ModeToggle />
       </div>
     </ContentCard>
