@@ -12,6 +12,7 @@ import TopNav from "@/components/header/topnav";
 import { ModeToggle } from "@/components/modetoggle";
 import { Menu } from "lucide-react";
 import MenuSheet from "@/app/menumodal";
+import { usePathname } from 'next/navigation'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,14 +21,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const openOverlay = () => {
-    console.log("Opening modal");
-  };
+  const pathname = usePathname()
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence key={pathname} mode="wait" initial={false}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
