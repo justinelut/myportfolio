@@ -4,9 +4,31 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
+import AnimatedText from "@/app/animation/textanimation";
 
 export default function page() {
   const title = "Frontend Developer";
+
+  const [replay, setReplay] = React.useState(true);
+  // Placeholder text data, as if from API
+  const placeholderText: {
+    key: number;
+    type: "heading1" | "heading2" | "paragraph";
+    text: string;
+  }[] = [{ key: 1, type: "heading1", text: "My portfolio preview" }];
+
+  const container = {
+    visible: {
+      transition: {
+        staggerChildren: 0.025,
+      },
+    },
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <>
@@ -14,7 +36,17 @@ export default function page() {
         <span className="flex w-full max-w-[960px] flex-col mt-8 mb-16 items-start max-md:max-w-full max-md:mb-10">
           <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
             <div className="text-3xl self-stretch grow whitespace-nowrap">
-              <motion.h3>My Portfolio Preview</motion.h3>
+              <motion.div
+                className="App"
+                initial="hidden"
+                // animate="visible"
+                animate={replay ? "visible" : "hidden"}
+                variants={container}
+              >
+                {placeholderText.map((item, index) => {
+                  return <AnimatedText {...item} key={index} />;
+                })}
+              </motion.div>
             </div>
             <div className="bg-black dark:bg-white w-20 shrink-0 h-0.5 my-auto" />
             <div className="text-3xl self-stretch whitespace-nowrap">2024</div>
@@ -48,7 +80,7 @@ export default function page() {
               <ArrowRight />
             </span>
           </Link>
-          <Link
+          {/* <Link
             href={"/contact"}
             className="items-center text-xl mt-10 px-6 py-2 dark:bg-white rounded-xl dark:text-black text-white font-extrabold bg-black grow flex justify-between gap-4"
           >
@@ -56,14 +88,22 @@ export default function page() {
             <span>
               <ArrowRight />
             </span>
-          </Link>
+          </Link> */}
         </span>
-        <div className="text-2xl leading-8 w-[352px] max-w-full mt-0 self-end max-md:mt-0">
-          Press the N key or your keyboard arrow keys to move to the next frame
-        </div>
-        <div className="text-base leading-6 mt-2 self-end">
-          (Shift + N to go backwards)
-        </div>
+        <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="text-2xl leading-8 w-[352px] max-w-full mt-0 self-end max-md:mt-0"
+    >
+      <div>
+        Press the N key or your keyboard arrow keys to move to the next frame
+      </div>
+      <div className="text-base leading-6 mt-2 self-end">
+        (Shift + N to go backward)
+      </div>
+    </motion.div>
       </div>
     </>
   );
