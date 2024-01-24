@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AnimatePresence key={pathname} mode="wait" initial={false}>
+        <AnimatePresence>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
