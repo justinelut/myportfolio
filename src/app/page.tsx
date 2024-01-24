@@ -1,17 +1,43 @@
+"use client"
 import { ModeToggle } from "@/components/modetoggle";
+import { useAnimate, usePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 
 export default function page() {
+
+  const [isPresent, safeToRemove] = usePresence()
+  const [scope, animate] = useAnimate()
+  
+  React.useEffect(() => {
+     if (isPresent) {
+       const enterAnimation = async () => {
+         await animate(scope.current, { opacity: 1 })
+         await animate("div", { opacity: 1, x: 0 })
+         await animate("h3", { opacity: 1, x: 1 })
+       }
+       enterAnimation()
+
+     } else {
+       const exitAnimation = async () => {
+         await animate("div", { opacity: 0, x: -100 })
+         await animate(scope.current, { opacity: 0 })
+         await animate("h3", { opacity: 0, x: 1 })
+         safeToRemove()
+       }
+       
+       exitAnimation()
+     }
+  }, [isPresent])
+
   return (
     <>
-   
-    <div className="items-center flex flex-col justify-center px-16 py-12 max-md:px-5">
+    <div ref={scope} className="items-center flex flex-col justify-center px-16 py-12 max-md:px-5">
       <span className="flex w-full max-w-[960px] flex-col mt-8 mb-16 items-start max-md:max-w-full max-md:mb-10">
         <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
           <div className="text-3xl self-stretch grow whitespace-nowrap">
-            My Portfolio Preview
+            <h3>My Portfolio Preview</h3>
           </div>
           <div className="bg-black dark:bg-white w-20 shrink-0 h-0.5 my-auto" />
           <div className="text-3xl self-stretch whitespace-nowrap">2024</div>
