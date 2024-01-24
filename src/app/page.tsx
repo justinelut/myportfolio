@@ -6,8 +6,7 @@ import Link from "next/link";
 import * as React from "react";
 
 export default function page() {
-  const title = "Framer Motion is a really cool tool";
-  
+  const title = "Frontend Developer";
 
   return (
     <>
@@ -15,7 +14,7 @@ export default function page() {
         <span className="flex w-full max-w-[960px] flex-col mt-8 mb-16 items-start max-md:max-w-full max-md:mb-10">
           <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
             <div className="text-3xl self-stretch grow whitespace-nowrap">
-              <h3>My Portfolio Preview</h3>
+              <motion.h3>My Portfolio Preview</motion.h3>
             </div>
             <div className="bg-black dark:bg-white w-20 shrink-0 h-0.5 my-auto" />
             <div className="text-3xl self-stretch whitespace-nowrap">2024</div>
@@ -24,7 +23,7 @@ export default function page() {
             Justine Gichana
           </div>
           <div className="self-stretch text-5xl mt-6 max-md:max-w-full max-md:text-4xl">
-            {title.split('').map((char, index) => (
+            {title.split("").map((char, index) => (
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -34,7 +33,8 @@ export default function page() {
                 }}
                 key={index}
               >
-                {char}{" "}
+                {char}
+                {""}
               </motion.span>
             ))}
           </div>
