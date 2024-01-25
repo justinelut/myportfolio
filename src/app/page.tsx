@@ -1,10 +1,11 @@
 "use client";
 import { ModeToggle } from "@/components/modetoggle";
-import { motion } from "framer-motion";
+import { AnimatePresence, Spring, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 import AnimatedText from "@/app/animation/textanimation";
+import { usePathname } from "next/navigation";
 
 export default function page() {
   const title = "Frontend Developer";
@@ -24,16 +25,30 @@ export default function page() {
       },
     },
   };
+  const pathname = usePathname();
+  const transitionSpringPhysics: Spring = {
+    type: "spring",
+    mass: 0.2,
+    stiffness: 80,
+    damping: 10,
+  };
+
+  const transitionColor = "red";
+
 
   const containerVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0 },
   };
 
+
+ 
+
   return (
     <>
+   
       <div className="items-center flex flex-col justify-center px-16 py-12 max-md:px-5">
-        <span className="flex w-full max-w-[960px] flex-col mt-8 mb-16 items-start max-md:max-w-full max-md:mb-10">
+        <span className="flex w-full max-w-[960px] flex-col mt-6 mb-10 items-start max-md:max-w-full max-md:mb-10">
           <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
             <div className="text-3xl self-stretch grow whitespace-nowrap">
               <motion.div
@@ -80,15 +95,7 @@ export default function page() {
               <ArrowRight />
             </span>
           </Link>
-          {/* <Link
-            href={"/contact"}
-            className="items-center text-xl mt-10 px-6 py-2 dark:bg-white rounded-xl dark:text-black text-white font-extrabold bg-black grow flex justify-between gap-4"
-          >
-            <span>Contact</span>
-            <span>
-              <ArrowRight />
-            </span>
-          </Link> */}
+         
         </span>
         <motion.div
       initial="hidden"

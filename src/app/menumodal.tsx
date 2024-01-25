@@ -25,7 +25,7 @@ export default function MenuSheet() {
     <div className="">
       {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
-          <div className="flex justify-end items-center mt-6 container mx-auto gap-10 mb-4">
+          <div className="flex justify-end items-center py-10 container mx-auto gap-10 mb-4">
             <ModeToggle />
             <div className="rounded-full bg-green-400 p-2 transition-all duration-300 hover:bg-red-400 hover:cursor-pointer">
               <SheetTrigger asChild>
