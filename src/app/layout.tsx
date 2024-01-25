@@ -10,11 +10,19 @@ import { AnimatePresence, Spring, motion } from "framer-motion";
 import { MobileMenu } from "@/components/mobilemenu";
 import TopNav from "@/components/header/topnav";
 import { ModeToggle } from "@/components/modetoggle";
-import { Menu } from "lucide-react";
+import {
+  BookCheck,
+  CircleUser,
+  FolderDot,
+  Menu,
+  NotepadText,
+  ShieldCheck,
+} from "lucide-react";
 import MenuSheet from "@/app/menumodal";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Icons } from "@/components/icons";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -59,6 +67,34 @@ export default function RootLayout({
   const OpenNav = () => {
     open ? setOpen(false) : setOpen(true);
   };
+
+  const links = [
+    {
+      link: "/projects",
+      title: "Projects",
+      icon: FolderDot,
+    },
+    {
+      link: "/contact",
+      title: "Contact",
+      icon: CircleUser ,
+    },
+    {
+      link: "/blog",
+      title: "Blog",
+      icon: BookCheck ,
+    },
+    {
+      link: "/resume",
+      title: "Resume",
+      icon: NotepadText,
+    },
+    {
+      link: "/certification",
+      title: "Certification",
+      icon: ShieldCheck ,
+    },
+  ];
 
   return (
     <html lang="en">
@@ -136,30 +172,32 @@ export default function RootLayout({
                     className="lg:w-1/3 md:w-1/3 w-full right-0 top-0 h-dvh bg-green-300 z-20 py-28 fixed"
                   >
                     <ul className="flex flex-col gap-4 px-6 justify-start">
-                      <li className="text-5xl text-white border-b p-4">
-                        Contact
-                      </li>
-                      <li className="text-5xl text-white border-b p-4">
-                        Contact
-                      </li>
-                      <li className="text-5xl text-white border-b p-4">
-                        Contact
-                      </li>
-                      <li className="text-5xl text-white border-b p-4">
-                        Contact
-                      </li>
-                      <li className="text-5xl text-white border-b p-4">
-                        Contact
-                      </li>
-                      <li className="text-5xl text-white border-b p-4">
-                        Contact
-                      </li>
+                      {links &&
+                        links.map((link, index) => (
+                          <motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {duration: 0.8}}}  className="flex flex-row justify-start items-center">
+                          <link.icon size={40} />
+                          <Link
+                            href={link.link}
+                            className="text-5xl text-white border-b p-4"
+                          >
+                            {link.title}
+                          </Link>
+                          </motion.div>
+                        ))}
                     </ul>
-                    <ul className="px-6 flex justify-start items-center b-0 gap-4">
-                      <li className="p-4"><Icons.x className="w-12" /></li>
-                      <li className="p-4"><Icons.linkedin className="w-12" /></li>
-                      <li className="p-4"><Icons.gitHub className="w-12" /></li>
-                      <li className="p-4"><Icons.discord className="w-12" /></li>
+                    <ul className="px-3 flex justify-start items-center b-0 gap-4">
+                      <li className="p-4">
+                        <Icons.x className="w-10" />
+                      </li>
+                      <li className="p-4">
+                        <Icons.linkedin className="w-10" />
+                      </li>
+                      <li className="p-4">
+                        <Icons.gitHub className="w-10" />
+                      </li>
+                      <li className="p-4">
+                        <Icons.discord className="w-10" />
+                      </li>
                     </ul>
                   </motion.nav>
                 )}
