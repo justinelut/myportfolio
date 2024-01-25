@@ -1,23 +1,37 @@
-"use client"
 import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes"
+import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
 
 export function ModeToggle() {
   const { setTheme, theme } = useTheme();
 
-
   const SwitchButtons = () => {
-    if (theme == "light" || theme == 'system') {
+    const buttonVariants = {
+      hidden: { scale: 0, opacity: 0 },
+      visible: { scale: 1, opacity: 1, transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } },
+    };
+
+    if (theme === "light" || theme === "system") {
       return (
-        <button onClick={() => setTheme("dark")}>
+        <motion.button
+          variants={buttonVariants}
+          initial="hidden"
+          animate="visible"
+          onClick={() => setTheme("dark")}
+        >
           <Moon />
-        </button>
+        </motion.button>
       );
     } else {
       return (
-        <button onClick={() => setTheme("light")}>
+        <motion.button
+          variants={buttonVariants}
+          initial="hidden"
+          animate="visible"
+          onClick={() => setTheme("light")}
+        >
           <Sun />
-        </button>
+        </motion.button>
       );
     }
   };

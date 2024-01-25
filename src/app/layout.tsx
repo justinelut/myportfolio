@@ -77,12 +77,12 @@ export default function RootLayout({
     {
       link: "/contact",
       title: "Contact",
-      icon: CircleUser ,
+      icon: CircleUser,
     },
     {
       link: "/blog",
       title: "Blog",
-      icon: BookCheck ,
+      icon: BookCheck,
     },
     {
       link: "/resume",
@@ -92,7 +92,7 @@ export default function RootLayout({
     {
       link: "/certification",
       title: "Certification",
-      icon: ShieldCheck ,
+      icon: ShieldCheck,
     },
   ];
 
@@ -120,7 +120,10 @@ export default function RootLayout({
                 {...animate(slide)}
               />
             </motion.div>
-            <div className="container w-full mx-auto flex justify-end py-10">
+            <div className="container w-full mx-auto flex items-center justify-end py-10 gap-6">
+              <div className="bg-green-500 pt-4 z-30 rounded-full items-center justify-center w-12 h-12 px-4 py-2 flex">
+                <ModeToggle />
+              </div>
               <div
                 onClick={OpenNav}
                 className="rounded-full w-12 h-12 p-4 bg-red-400 z-30 gap-2 transition-all relative duration-300 hover:bg-red-400 hover:cursor-pointer flex flex-col items-center justify-center"
@@ -169,36 +172,9 @@ export default function RootLayout({
                     animate={{ x: 0 }}
                     exit={{ x: "100%" }}
                     transition={{ duration: 0.3 }}
-                    className="lg:w-1/3 md:w-1/3 w-full right-0 top-0 h-dvh bg-green-300 z-20 py-28 fixed"
+                    className="lg:w-1/3 md:w-1/3 w-full right-0 top-0 h-dvh z-20 py-28 fixed border-l bg-white dark:bg-slate-800 shadow-slate-500 shadow-2xl"
                   >
-                    <ul className="flex flex-col gap-4 px-6 justify-start">
-                      {links &&
-                        links.map((link, index) => (
-                          <motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {duration: 0.8}}}  className="flex flex-row justify-start items-center">
-                          <link.icon size={40} />
-                          <Link
-                            href={link.link}
-                            className="text-5xl text-white border-b p-4"
-                          >
-                            {link.title}
-                          </Link>
-                          </motion.div>
-                        ))}
-                    </ul>
-                    <ul className="px-3 flex justify-start items-center b-0 gap-4">
-                      <li className="p-4">
-                        <Icons.x className="w-10" />
-                      </li>
-                      <li className="p-4">
-                        <Icons.linkedin className="w-10" />
-                      </li>
-                      <li className="p-4">
-                        <Icons.gitHub className="w-10" />
-                      </li>
-                      <li className="p-4">
-                        <Icons.discord className="w-10" />
-                      </li>
-                    </ul>
+                    <MenuCard />
                   </motion.nav>
                 )}
               </AnimatePresence>
