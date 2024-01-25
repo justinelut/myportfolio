@@ -47,7 +47,7 @@ export default function page() {
   return (
     <>
    
-      <div className="items-center flex flex-col justify-center px-16 py-12 max-md:px-5">
+      <div className="items-center flex flex-col justify-center px-16 pt-10 max-md:px-5">
         <span className="flex w-full max-w-[960px] flex-col mt-6 mb-10 items-start max-md:max-w-full max-md:mb-10">
           <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
             <div className="text-3xl self-stretch grow whitespace-nowrap">
