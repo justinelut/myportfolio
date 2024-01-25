@@ -66,11 +66,11 @@ export const MenuCard = () => {
               }`}
             >
               <div className="flex flex-row gap-2 items-center">
-                <div className="rounded-full p-3 bg-red-500 font-bold">
+                <div className="rounded-full p-2 bg-red-500 font-bold">
                   <link.icon size={30} className="text-salte-500" />
                 </div>
                 <Link
-                  className="text-3xl font-extrabold text-slate-500"
+                  className="text-3xl font-extrabold text-slate-500 dark:text-white"
                   href={link.link}
                 >
                   {link.title}
@@ -84,7 +84,7 @@ export const MenuCard = () => {
           </Link>
         </motion.div>
       ))}
-      <ul className="flex justify-between items-center b-0 gap-4">
+      <ul className="flex justify-start items-center b-0 gap-2">
         <li className="p-4">
           <Icons.x className="w-10" />
         </li>

@@ -52,7 +52,7 @@ export default function page() {
           <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
             <div className="text-3xl self-stretch grow whitespace-nowrap">
               <motion.div
-                className="App"
+                className="z-10"
                 initial="hidden"
                 // animate="visible"
                 animate={replay ? "visible" : "hidden"}

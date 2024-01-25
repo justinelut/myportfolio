@@ -2,16 +2,12 @@ import * as React from "react";
 
 export default function page() {
   return (
-    <div className="bg-stone-50 flex flex-col justify-center items-center px-16 py-12 max-md:px-5">
-      <span className="flex w-full max-w-[1679px] flex-col items-stretch mt-8 mb-11 max-md:max-w-full max-md:mb-10">
-        <div className="text-black text-2xl max-md:max-w-full">
+    <div className="flex flex-col justify-center items-center px-16 max-md:px-5">
+      <span className="flex w-full max-w-[1679px] flex-col items-stretch mb-2 max-md:max-w-full max-md:mb-10">
+        <div className="text-4xl max-md:max-w-full mb-6">
           Other projects
         </div>
-        <div className="text-black text-5xl mt-36 max-md:max-w-full max-md:text-4xl max-md:mt-10">
-          Invite viewers to explore your diverse portfolio. Add projects to show
-          your wide skillset and experience.
-        </div>
-        <div className="mt-20 px-px max-md:max-w-full max-md:mt-10">
+        <div className="max-md:max-w-full max-md:mt-4">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
               <span className="items-stretch flex grow flex-col max-md:max-w-full max-md:mt-10">
@@ -44,10 +40,10 @@ export default function page() {
                     </div>
                   </div>
                 </div>
-                <div className="text-black text-2xl font-bold mt-10 max-md:max-w-full">
+                <div className="text-2xl font-bold mt-10 max-md:max-w-full">
                   Client name
                 </div>
-                <div className="text-black text-2xl leading-9 mt-2 max-md:max-w-full">
+                <div className="text-2xl leading-9 mt-2 max-md:max-w-full">
                   Provide a brief summary of the project to pique interest,
                   aiming to spark curiosity in hiring managers and prompt an
                   interview invitation.
@@ -72,10 +68,10 @@ export default function page() {
                     </div>
                   </div>
                 </div>
-                <div className="text-black text-2xl font-bold mt-10 max-md:max-w-full">
+                <div className=" text-2xl font-bold mt-10 max-md:max-w-full">
                   Client name
                 </div>
-                <div className="text-black text-2xl leading-9 mt-2 max-md:max-w-full">
+                <div className="text-2xl leading-9 mt-2 max-md:max-w-full">
                   Provide a brief summary of the project to pique interest,
                   aiming to spark curiosity in hiring managers and prompt an
                   interview invitation.
