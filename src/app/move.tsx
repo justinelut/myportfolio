@@ -16,6 +16,8 @@ const Move: React.FC<MoveProps> = ({ children, pathN }) => {
         router.back(); // Navigate back
       } else if (event.key === "n") {
         router.push(pathN); // Navigate to the provided path
+      } else if (event.key === "r") {
+        router.push("/"); // Navigate to the provided path
       }
     };
 

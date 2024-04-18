@@ -1,7 +1,9 @@
 import * as React from "react";
+import Move from "../move";
 
 export default function page(){
   return (
+    <Move pathN="/">
     <div className="bg-stone-50 flex flex-col justify-center px-16 py-12 items-start max-md:px-5">
       <span className="flex w-[707px] max-w-full flex-col ml-16 mt-8 mb-11 max-md:mb-10">
         <div className="text-black text-2xl self-stretch max-md:max-w-full">
@@ -27,6 +29,7 @@ export default function page(){
         </div>
       </span>
     </div>
+    </Move>
   );
 }
 
