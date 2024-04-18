@@ -23,6 +23,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Icons } from "@/components/icons";
 import Link from "next/link";
+import QueryProvider from "@/app/query-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -99,6 +100,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body key={pathname} className={inter.className}>
+        <QueryProvider>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AnimatePresence mode="wait">
             <motion.div key={pathname}>
@@ -180,6 +182,7 @@ export default function RootLayout({
             {children}
           </AnimatePresence>
         </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   );

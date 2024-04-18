@@ -11,6 +11,11 @@ const nextConfig = {
         hostname: "api.pixelayout.site",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "pixelayout.site",
+        port: "",
+      },
     ],
   },
 }
