@@ -99,12 +99,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body key={pathname} className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AnimatePresence mode="wait">
             <motion.div key={pathname}>
               <motion.div
@@ -121,65 +116,65 @@ export default function RootLayout({
               />
             </motion.div>
             <div className="bg-white dark:bg-slate-950 sticky top-0">
-            <div className="container w-full mx-auto flex items-center justify-end py-10 gap-6 ">
-              <div className="bg-green-500 pt-4 z-30 rounded-full items-center justify-center w-12 h-12 px-4 py-2 flex">
-                <ModeToggle />
-              </div>
-              <div
-                onClick={OpenNav}
-                className="rounded-full w-12 h-12 p-4 bg-red-400 z-30 gap-2 transition-all relative duration-300 hover:bg-red-400 hover:cursor-pointer flex flex-col items-center justify-center"
-              >
-                {open ? (
-                  <>
-                    <motion.div
-                      initial={{ rotate: 0, scaleY: 1 }}
-                      animate={{ rotate: -45, scaleY: 1 }}
-                      exit={{ rotate: 0, scaleY: 1 }}
-                      transition={{ duration: 0.3 }}
-                      className="h-[3px] w-7 absolute bg-white transform -rotate-45 origin-center"
-                    ></motion.div>
-                    <motion.div
-                      initial={{ rotate: 0, scaleY: 1 }}
-                      animate={{ rotate: 45, scaleY: 1 }}
-                      exit={{ rotate: 0, scaleY: 1 }}
-                      transition={{ duration: 0.3 }}
-                      className="h-[3px] w-7 absolute bg-white transform rotate-45 origin-center"
-                    ></motion.div>
-                  </>
-                ) : (
-                  <>
-                    <motion.div
-                      initial={{ rotate: 0, scaleY: 1 }}
-                      animate={{ rotate: 0, scaleY: 1 }}
-                      exit={{ rotate: 0, scaleY: 1 }}
-                      transition={{ duration: 0.3 }}
-                      className="h-[3px] w-7 bg-white transform  origin-center"
-                    ></motion.div>
-                    <motion.div
-                      initial={{ rotate: 0, scaleY: 1 }}
-                      animate={{ rotate: 0, scaleY: 1 }}
-                      exit={{ rotate: 0, scaleY: 1 }}
-                      transition={{ duration: 0.3 }}
-                      className="h-[3px] w-7 bg-white transform  origin-center"
-                    ></motion.div>
-                  </>
-                )}
-              </div>
+              <div className="container w-full mx-auto flex items-center justify-end py-10 gap-6 ">
+                <div className="bg-green-500 pt-4 z-30 rounded-full items-center justify-center w-12 h-12 px-4 py-2 flex">
+                  <ModeToggle />
+                </div>
+                <div
+                  onClick={OpenNav}
+                  className="rounded-full w-12 h-12 p-4 bg-red-400 z-30 gap-2 transition-all relative duration-300 hover:bg-red-400 hover:cursor-pointer flex flex-col items-center justify-center"
+                >
+                  {open ? (
+                    <>
+                      <motion.div
+                        initial={{ rotate: 0, scaleY: 1 }}
+                        animate={{ rotate: -45, scaleY: 1 }}
+                        exit={{ rotate: 0, scaleY: 1 }}
+                        transition={{ duration: 0.3 }}
+                        className="h-[3px] w-7 absolute bg-white transform -rotate-45 origin-center"
+                      ></motion.div>
+                      <motion.div
+                        initial={{ rotate: 0, scaleY: 1 }}
+                        animate={{ rotate: 45, scaleY: 1 }}
+                        exit={{ rotate: 0, scaleY: 1 }}
+                        transition={{ duration: 0.3 }}
+                        className="h-[3px] w-7 absolute bg-white transform rotate-45 origin-center"
+                      ></motion.div>
+                    </>
+                  ) : (
+                    <>
+                      <motion.div
+                        initial={{ rotate: 0, scaleY: 1 }}
+                        animate={{ rotate: 0, scaleY: 1 }}
+                        exit={{ rotate: 0, scaleY: 1 }}
+                        transition={{ duration: 0.3 }}
+                        className="h-[3px] w-7 bg-white transform  origin-center"
+                      ></motion.div>
+                      <motion.div
+                        initial={{ rotate: 0, scaleY: 1 }}
+                        animate={{ rotate: 0, scaleY: 1 }}
+                        exit={{ rotate: 0, scaleY: 1 }}
+                        transition={{ duration: 0.3 }}
+                        className="h-[3px] w-7 bg-white transform  origin-center"
+                      ></motion.div>
+                    </>
+                  )}
+                </div>
 
-              <AnimatePresence>
-                {open && (
-                  <motion.nav
-                    initial={{ x: "100%" }}
-                    animate={{ x: 0 }}
-                    exit={{ x: "100%" }}
-                    transition={{ duration: 0.3 }}
-                    className="lg:w-1/3 md:w-1/3 w-full right-0 top-0 h-dvh z-20 py-28 fixed border-l bg-white dark:bg-slate-800 shadow-slate-500 shadow-lg"
-                  >
-                    <MenuCard />
-                  </motion.nav>
-                )}
-              </AnimatePresence>
-            </div>
+                <AnimatePresence>
+                  {open && (
+                    <motion.nav
+                      initial={{ x: "100%" }}
+                      animate={{ x: 0 }}
+                      exit={{ x: "100%" }}
+                      transition={{ duration: 0.3 }}
+                      className="lg:w-1/3 md:w-1/3 w-full right-0 top-0 h-dvh z-20 py-28 fixed border-l bg-white dark:bg-slate-800 shadow-slate-500 shadow-lg"
+                    >
+                      <MenuCard />
+                    </motion.nav>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
 
             {children}
