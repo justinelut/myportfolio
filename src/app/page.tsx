@@ -6,6 +6,7 @@ import Link from "next/link";
 import * as React from "react";
 import AnimatedText from "@/app/animation/textanimation";
 import { usePathname } from "next/navigation";
+import Move from "@/app/move";
 
 export default function page() {
   const title = "Frontend Developer";
@@ -46,7 +47,7 @@ export default function page() {
 
   return (
     <>
-   
+     <Move pathN="/intro">
       <div className="items-center flex flex-col justify-center px-16 pt-10 max-md:px-5">
         <span className="flex w-full max-w-[960px] flex-col mt-6 mb-10 items-start max-md:max-w-full max-md:mb-10">
           <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
@@ -105,13 +106,14 @@ export default function page() {
       className="text-2xl leading-8 w-[352px] max-w-full mt-0 self-end max-md:mt-0"
     >
       <div>
-        Press the N key or your keyboard arrow keys to move to the next frame
+        Press the N key on your keyboard arrow keys to move to the next page
       </div>
       <div className="text-base leading-6 mt-2 self-end">
-        (Shift + N to go backward)
+        (Press B to go backward)
       </div>
     </motion.div>
       </div>
+      </Move>
     </>
   );
 }
