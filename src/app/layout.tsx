@@ -24,6 +24,7 @@ import { useState } from "react";
 import { Icons } from "@/components/icons";
 import Link from "next/link";
 import QueryProvider from "@/app/query-provider";
+import { MainMenu } from "./mainmenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -122,7 +123,7 @@ export default function RootLayout({
                 <div className="bg-green-500 pt-4 z-30 rounded-full items-center justify-center w-12 h-12 px-4 py-2 flex">
                   <ModeToggle />
                 </div>
-                <div
+                {/* <div
                   onClick={OpenNav}
                   className="rounded-full w-12 h-12 p-4 bg-red-400 z-30 gap-2 transition-all relative duration-300 hover:bg-red-400 hover:cursor-pointer flex flex-col items-center justify-center"
                 >
@@ -161,7 +162,9 @@ export default function RootLayout({
                       ></motion.div>
                     </>
                   )}
-                </div>
+                </div> */}
+
+                <MainMenu />
 
                 <AnimatePresence>
                   {open && (
