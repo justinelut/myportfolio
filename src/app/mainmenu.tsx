@@ -24,14 +24,19 @@ import Link from "next/link";
 
 const links = [
   {
-    link: "/projects",
-    title: "Projects",
+    link: "/intro",
+    title: "Intro",
     icon: FolderDot,
   },
   {
-    link: "/contact",
-    title: "Contact",
-    icon: CircleUser,
+    link: "/languages",
+    title: "Languages",
+    icon: FolderDot,
+  },
+  {
+    link: "/portfolio",
+    title: "Portfolio",
+    icon: FolderDot,
   },
   {
     link: "/blog",
@@ -44,9 +49,14 @@ const links = [
     icon: NotepadText,
   },
   {
-    link: "/certification",
-    title: "Certification",
+    link: "/frameworks",
+    title: "Frameworks",
     icon: ShieldCheck,
+  },
+  {
+    link: "/contact",
+    title: "Contact",
+    icon: CircleUser,
   },
 ];
 
@@ -56,7 +66,7 @@ export function MainMenu() {
       <SheetTrigger asChild className="text-white">
         <Button
           variant="outline"
-          className="bg-green-600 rounded-full p-6 text-white"
+          className="bg-orange-600 rounded-full p-6 text-white"
         >
           <AlignLeft size={30} />
         </Button>

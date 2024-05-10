@@ -18,8 +18,9 @@ export default function BlogGrid() {
         ? "Loading"
         : data &&
           data.map((blog, index) => (
-          
+            
               <SingleBlog post={blog} />
+           
        
           ))}
     </>
