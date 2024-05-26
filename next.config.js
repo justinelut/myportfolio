@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const withMDX = require('@next/mdx')()
 const nextConfig = {
      // Configure `pageExtensions` to include MDX files
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
@@ -20,4 +21,6 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withMDX(nextConfig)
+
+
