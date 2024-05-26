@@ -1,16 +1,26 @@
 ---
 title: Pixepulse blog
-description: Pixepulse is our blogging platform where we share insights, tutorials, and best practices on modern web development, with a focus on Next.js, React, Tailwind CSS, and API integration. Through Pixelayout, I aim to empower developers and designers with practical knowledge and actionable tips to enhance their skills and build exceptional web applications.
+description: Pixepulse is my blogging platform where i share insights, tutorials, and best practices on modern web development, with a focus on Next.js, React, Tailwind CSS, and API integration. Through pixel pulse, I aim to empower developers and designers with practical knowledge and actionable tips to enhance their skills and build exceptional web applications.
 icon: https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/y8jtms3i1im9lba/pixelayouticon_K6veOBICAs.png?token=
 websiteslug: https://pixelayout.site
 image: https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/ukghylgtj687501/pixelpulse_8FprW7yhq8.webp?token=
 ---
 
-<Callout>
+import Link from 'next/link'
+import Image from 'next/image'
+import {Check, Search} from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import Nextjs from "@/app/icons/nextjs";
+import Pocketbase from "@/app/icons/pocketbase";
+import TailwindCSS from "@/app/icons/tailwind";
 
-This is our blog platform where we talk about frontend development and design [Pixel Pulse](https://pixelayout.site).
 
-</Callout>
+<div>
+
+Pixepulse is my blogging platform where i share insights, tutorials, and best practices on modern web development, with a focus on Next.js, React, Tailwind CSS, and API integration. Through pixel pulse, I aim to empower developers and designers with practical knowledge and actionable tips to enhance their skills and build exceptional web applications.
+
+</div>
 
 # Pixelayout
 
@@ -158,7 +168,7 @@ Pixelpulse is our personal blogging platform where we share insights, tutorials,
   Using handlesbars which is a rendering engine that return html from the server we were able to get near maximum performance and maximum seo
   for the site
 
-        <Image
+        <img
           src="https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/z9ryr7vaatdfwkw/pixelpulseseo_7TKu0PZwGT.webp?token="
           alt="google lighthouse results"
           width={720}
@@ -173,7 +183,7 @@ Pixelpulse is our personal blogging platform where we share insights, tutorials,
   -The improved seo and performance also ment that google was able to easily crawl pixel pulse which improved its search on google
 
 {" "}
-<Image
+<img
   src="https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/67brvfihz7ik1wh/pixelpulsegooglesearch_1MULHi1aHx.webp?token="
   alt="google lighthouse results"
   width={720}
