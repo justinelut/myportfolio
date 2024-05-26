@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { MdxCard } from "@/components/content/mdx-card";
 import { Callout } from "@/components/shared/callout";
 import { CopyButton } from "@/components/shared/copy-button";
-import { Pricing } from "@/content/projects/featured";
+import { Pricing } from "@/content/featured";
 import { Check, Search } from "lucide-react";
 import TailwindCSS from "@/app/icons/tailwind";
 import Nextjs from "@/app/icons/nextjs";

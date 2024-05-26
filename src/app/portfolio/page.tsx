@@ -1,6 +1,9 @@
+import { getAllPostsMeta } from "@/lib/mdx";
 import * as React from "react";
 
-export default function page() {
+export default async function page() {
+  const projects = await getAllPostsMeta()
+  console.log(projects)
   return (
     <div className="flex flex-col justify-center items-center px-16 max-md:px-5">
       <span className="flex w-full max-w-[1679px] flex-col items-stretch mb-2 max-md:max-w-full max-md:mb-10">
