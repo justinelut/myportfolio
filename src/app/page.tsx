@@ -1,12 +1,15 @@
 "use client";
 import { ModeToggle } from "@/components/modetoggle";
 import { AnimatePresence, Spring, motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 import AnimatedText from "@/app/animation/textanimation";
 import { usePathname } from "next/navigation";
 import Move from "@/app/move";
+import TypingEffect from "./typing-effect";
+import AnimateItems from "./animate-items";
+import AnimatedComponent from "./animate-component";
 
 export default function page() {
   const title = "Frontend Developer";
@@ -48,52 +51,41 @@ export default function page() {
           <span className="flex w-full max-w-[960px] flex-col mt-6 mb-10 items-start max-md:max-w-full max-md:mb-10">
             <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
               <div className="text-3xl self-stretch grow whitespace-nowrap">
-                <motion.div
-                  className="z-10"
-                  initial="hidden"
-                  // animate="visible"
-                  animate={replay ? "visible" : "hidden"}
-                  variants={container}
-                >
-                  {placeholderText.map((item, index) => {
-                    return <AnimatedText {...item} key={index} />;
-                  })}
-                </motion.div>
+               <AnimateItems text={placeholderText} />
               </div>
               <div className="bg-black dark:bg-white w-20 shrink-0 h-0.5 my-auto" />
               <div className="text-3xl self-stretch whitespace-nowrap">
                 {new Date().getFullYear()}
               </div>
             </span>
-            <div className="self-stretch text-7xl mt-32 max-md:max-w-full max-md:text-4xl max-md:mt-10">
-              Justine Gichana
-            </div>
-            <div className="self-stretch text-5xl mt-6 max-md:max-w-full max-md:text-4xl">
-              {title.split("").map((char, index) => (
-                <motion.span
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    duration: 0.25,
-                    delay: index / 10,
-                  }}
-                  key={index}
-                >
-                  {char}
-                  {""}
-                </motion.span>
-              ))}
-            </div>
 
-            <Link
-              href={"/intro"}
-              className="items-center text-xl mt-10 px-8 py-4 dark:bg-white rounded-full dark:text-black text-white font-extrabold bg-orange-600 grow flex justify-between gap-4"
-            >
-              <span>Start</span>
-              <span>
-                <ArrowRight />
-              </span>
-            </Link>
+            <div className="text-7xl mt-32">Justine Gichana</div>
+
+            <div className="self-stretch text-5xl mt-6 max-md:max-w-full max-md:text-4xl">
+              <TypingEffect text={title} />
+            </div>
+            <AnimatedComponent animationType="slide" direction="up" duration={0.3} delay={0.5}>
+            <div className="flex justify-between gap-x-10 items-center">
+              <Link
+                href={"/intro"}
+                className="items-center text-xl mt-10 px-8 py-4 dark:bg-white rounded-full dark:text-black text-white font-extrabold bg-orange-600 grow flex justify-between gap-4"
+              >
+                <span>About me</span>
+                <span>
+                  <ArrowRight />
+                </span>
+              </Link>
+              <div className="">
+                <Link
+                  href="https://storage.rxresu.me/clp9fvgah3umc9hunmz3t51sk/resumes/Justine Web.pdf"
+                  className="items-center text-xl mt-10 px-8 py-4 rounded-full  text-white font-extrabold bg-orange-600 grow flex justify-between gap-4"
+                >
+                  <span>Resume</span>
+                  <ArrowUpRight />
+                </Link>
+              </div>
+            </div>
+            </AnimatedComponent>
           </span>
           <motion.div
             initial="hidden"

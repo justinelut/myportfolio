@@ -25,13 +25,15 @@ export default function SingleLanguage() {
         languages.map((lang, index) => (
           <div
             key={index}
-            className="bg-secondary p-10 rounded-3xl flex flex-col gap-y-6"
+            className="bg-secondary bg-opacity-50 p-10 rounded-3xl flex flex-col gap-y-6"
           >
             {lang?.icon}
+            <div className="flex flex-col gap-y-2">
             <h3 className="text-3xl font-bold">{lang?.title}</h3>
             {lang?.info()}
             <div className="flex items-start">
               <MainDialogue title={lang?.title} />
+            </div>
             </div>
           </div>
         ))}

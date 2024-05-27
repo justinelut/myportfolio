@@ -73,19 +73,17 @@ export function MainMenu() {
       </SheetTrigger>
       <SheetContent className="bg-opacity-70 bg-orange-600 min-w-full">
         <div className="flex flex-col lg:items-end justify-center py-20 text-white h-screen pr-10 gap-y-10">
-            {
-                links && links.map((link, index)=>(
-                    <Link
-                    href={`${link.link}`}
-                    key={index}
-                    className="text-4xl hover:underline  flex items-center justify-between gap-x-10 gap-y-10"
-                  >
-                    <h3>{link?.title}</h3>
-                    <ArrowRight size={30} />
-                  </Link>
-                ))
-            }
-        
+          {links &&
+            links.map((link, index) => (
+              <Link
+                href={`${link.link}`}
+                key={index}
+                className="text-4xl hover:underline  flex items-center justify-between gap-x-10 gap-y-10"
+              >
+                <h3>{link?.title}</h3>
+                <ArrowRight size={30} />
+              </Link>
+            ))}
         </div>
       </SheetContent>
     </Sheet>
