@@ -72,7 +72,7 @@ export function MainMenu() {
         </Button>
       </SheetTrigger>
       <SheetContent className="bg-opacity-70 bg-orange-600 min-w-full">
-        <div className="flex flex-col items-end justify-center py-20 text-white h-screen pr-10 gap-y-10">
+        <div className="flex flex-col lg:items-end justify-center py-20 text-white h-screen pr-10 gap-y-10">
             {
                 links && links.map((link, index)=>(
                     <Link
