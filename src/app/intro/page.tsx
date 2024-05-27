@@ -89,9 +89,10 @@ export default function page() {
                 className="object-contain object-center w-full self-end overflow-hidden shrink-0 max-w-full"
               />
             </AnimatedComponent>
-            <Navigator text="Programming languages" url="/languages" />
+            
           </div>
         </div>
+        <Navigator text="Programming languages" url="/languages" />
       </div>
     </Move>
   );
