@@ -88,6 +88,7 @@ const AnimatedComponent: React.FC<AnimationProps> = ({
         animate="visible"
         exit="exit"
         variants={variants}
+        className='w-full'
       >
         {children}
       </motion.div>

@@ -29,6 +29,10 @@ const rootDirectory = path.join(process.cwd(), "src", "app/content");
 interface Frontmatter {
   title: string;
   date: string;
+  description: string;
+  icon: string;
+  websiteslug: string;
+  image: string;
   [key: string]: any; // To handle any additional frontmatter properties
 }
 
@@ -50,7 +54,7 @@ export const getPostBySlug = async (slug: string): Promise<Post> => {
   const { frontmatter, content } = await compileMDX<Frontmatter>({
     source: fileContent,
     options: { parseFrontmatter: true },
-    components:components
+    components: components,
   });
 
   return { meta: { ...frontmatter, slug: realSlug }, content };

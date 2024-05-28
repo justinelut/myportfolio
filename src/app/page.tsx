@@ -65,7 +65,7 @@ export default function page() {
               <TypingEffect text={title} />
             </div>
             <AnimatedComponent animationType="slide" direction="up" duration={0.3} delay={0.5}>
-            <div className="flex justify-between gap-x-10 items-center">
+            <div className="flex justify-start gap-x-10 items-center">
               <Link
                 href={"/intro"}
                 className="items-center text-xl mt-10 px-8 py-4 dark:bg-white rounded-full dark:text-black text-white font-extrabold bg-orange-600 grow flex justify-between gap-4"
@@ -75,15 +75,15 @@ export default function page() {
                   <ArrowRight />
                 </span>
               </Link>
-              <div className="">
+             
                 <Link
                   href="https://storage.rxresu.me/clp9fvgah3umc9hunmz3t51sk/resumes/Justine Web.pdf"
-                  className="items-center text-xl mt-10 px-8 py-4 rounded-full  text-white font-extrabold bg-orange-600 grow flex justify-between gap-4"
+                  className="items-center text-xl mt-10 px-8 py-4 rounded-full  text-white font-extrabold bg-orange-600 grow flex justify-start gap-4"
                 >
                   <span>Resume</span>
                   <ArrowUpRight />
                 </Link>
-              </div>
+              
             </div>
             </AnimatedComponent>
           </span>

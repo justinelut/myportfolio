@@ -25,18 +25,23 @@ import Link from "next/link";
 const links = [
   {
     link: "/intro",
-    title: "Intro",
+    title: "About me",
+    icon: FolderDot,
+  },
+  {
+    link: "/projects",
+    title: "Projects",
     icon: FolderDot,
   },
   {
     link: "/languages",
-    title: "Languages",
+    title: "P. Languages",
     icon: FolderDot,
   },
   {
-    link: "/portfolio",
-    title: "Portfolio",
-    icon: FolderDot,
+    link: "/frameworks",
+    title: "Frameworks",
+    icon: ShieldCheck,
   },
   {
     link: "/blog",
@@ -44,14 +49,9 @@ const links = [
     icon: BookCheck,
   },
   {
-    link: "/resume",
-    title: "Resume",
+    link: "/experience",
+    title: "Experience",
     icon: NotepadText,
-  },
-  {
-    link: "/frameworks",
-    title: "Frameworks",
-    icon: ShieldCheck,
   },
   {
     link: "/contact",
