@@ -5,6 +5,7 @@ import AnimateItems from "../animate-items";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import AnchorTag from "./anchor";
 
 export default async function Projects() {
   const projects = await getAllPostsMeta();
@@ -32,34 +33,56 @@ export default async function Projects() {
                 </h3>
               </div>
               Pixel Layout - A Saas platform
-              <div className="flex gap-x-10 mt-6">
-                <Link
-                  href="/"
-                  className="rounded-full bg-orange-600 text-white px-4 py-2 flex gap-x-2 items-center justify-center"
-                >
-                  <span>Check it out</span>
-                  <ArrowRight size={16}/>
-                </Link>
-                <Link
-                  href="/"
-                  className="rounded-full bg-orange-600 text-white px-4 py-2 flex gap-x-2 items-center justify-center"
-                >
-                  <span>Learn more</span>
-                  <ArrowRight size={16}/>
-                </Link>
-              </div>
+              <AnchorTag link="/" url="/" />
             </div>
           </div>
         </AnimatedComponent>
       </div>
-      <div className="flex gap-y-4 flex-col h-[550px]">
-        <div className="bg-slate-300 bg-opacity-40 w-full h-[275px] gap-x-10 rounded-3xl flex flex-row">
-           <Image src={projects[0]?.image} alt={projects[0]?.title} height={1000} width={1000} className="object-cover w-[40%] h-full rounded-3xl" />
-           <h3 className="text-">Get me</h3>
+      <div className="flex gap-y-4 flex-col h-[550px] items-center justify-center">
+        <div className="bg-slate-300 bg-opacity-40 w-full h-[275px] items-center gap-x-6 rounded-3xl flex flex-row">
+          <Image
+            src={projects[1]?.image}
+            alt={projects[1]?.title}
+            height={1000}
+            width={1000}
+            className="object-cover w-[50%] h-full rounded-3xl"
+          />
+          <div className="flex flex-col">
+            <h3 className="text-bold dark:text-white text-3xl text-slate-800">
+              {projects[1]?.title}
+            </h3>
+            <AnchorTag
+              link={projects[1]?.websiteslug}
+              url={projects[1]?.slug}
+            />
+          </div>
         </div>
         <div className="w-full flex h-[275px] rounded-3xl gap-4">
-          <div className="h-full bg-orange-600 w-[50%] rounded-3xl"></div>
-          <div className="h-full bg-orange-600 w-[50%] rounded-3xl"></div>
+          <div className="h-full relative p-4 bg-cover bg-center bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/y041ka7n063gvm8/typescript_TWfjLMIhpp.svg?token=')] bg-orange-600 w-[50%] rounded-3xl">
+            <div className="absolute inset-0 bg-slate-300 bg-opacity-50 rounded-3xl"></div>
+            <div className="relative">
+              <AnchorTag
+                link={projects[1]?.websiteslug}
+                url={projects[1]?.slug}
+              />
+               <h3 className="text-bold dark:text-white text-3xl text-slate-800 mt-6">
+              {projects[1]?.title}
+            </h3>
+            </div>
+           
+          </div>
+          <div className="h-full relative p-4 bg-cover bg-center bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/y041ka7n063gvm8/typescript_TWfjLMIhpp.svg?token=')] bg-orange-600 w-[50%] rounded-3xl">
+            <div className="absolute inset-0 bg-orange-300 bg-opacity-50 rounded-3xl"></div>
+            <div className="relative">
+              <AnchorTag
+                link={projects[1]?.websiteslug}
+                url={projects[1]?.slug}
+              />
+              <h3 className="text-bold dark:text-white text-3xl text-slate-800 mt-6">
+              {projects[1]?.title}
+            </h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>
