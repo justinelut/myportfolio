@@ -1,5 +1,5 @@
 import type { SVGProps } from "react";
-const React = (props: SVGProps<SVGSVGElement>) => (
+const Reactjs = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 256 228"
     width="1em"
@@ -14,4 +14,4 @@ const React = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-export default React;
+export default Reactjs;
