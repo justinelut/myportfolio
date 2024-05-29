@@ -11,7 +11,7 @@ export default async function Projects() {
   const projects = await getAllPostsMeta();
   
   return (
-    <div className="grid lg:grid-cols-2 justify-center gap-10 h-[600px]">
+    <div className="grid lg:grid-cols-2 grid-cols-1 justify-center gap-10 h-[600px]">
       <div className="flex w-full">
         <AnimatedComponent
           animationType="slide"
@@ -35,7 +35,7 @@ export default async function Projects() {
         </AnimatedComponent>
       </div>
       <div className="flex gap-y-4 flex-col h-[550px] items-center justify-center">
-        <div className="bg-slate-300 bg-opacity-40 w-full h-[275px] items-center gap-x-6 rounded-3xl flex flex-row">
+        <div className="bg-slate-300 bg-opacity-40 w-full h-[275px] items-center gap-x-6 rounded-3xl flex lg:flex-row flex-col">
           <Image
             src={projects[1]?.image}
             alt={projects[1]?.title}
@@ -53,29 +53,29 @@ export default async function Projects() {
             />
           </div>
         </div>
-        <div className="w-full flex h-[275px] rounded-3xl gap-4">
-          <div className="h-full relative p-4 bg-cover bg-center bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/y041ka7n063gvm8/typescript_TWfjLMIhpp.svg?token=')] bg-orange-600 w-[50%] rounded-3xl">
+        <div className="w-full flex h-[275px] rounded-3xl gap-4 lg:flex-row flex-col">
+          <div className="h-full relative p-4 bg-cover bg-center bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/y041ka7n063gvm8/typescript_TWfjLMIhpp.svg?token=')] bg-orange-600 lg:w-[50%] w-[100%] rounded-3xl">
             <div className="absolute inset-0 bg-slate-300 bg-opacity-50 rounded-3xl"></div>
             <div className="relative">
               <AnchorTag
-                link={projects[1]?.websiteslug}
+                link={projects[2]?.websiteslug}
                 url={`/projects/projects[1]?.slug`}
               />
                <h3 className="text-bold dark:text-white text-3xl text-slate-800 mt-6">
-              {projects[1]?.title}
+              {projects[2]?.title}
             </h3>
             </div>
            
           </div>
-          <div className="h-full relative p-4 bg-cover bg-center bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/y041ka7n063gvm8/typescript_TWfjLMIhpp.svg?token=')] bg-orange-600 w-[50%] rounded-3xl">
+          <div className="h-full relative p-4 bg-cover bg-center bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/y041ka7n063gvm8/typescript_TWfjLMIhpp.svg?token=')] bg-orange-600 lg:w-[50%] w-[100%] rounded-3xl">
             <div className="absolute inset-0 bg-orange-300 bg-opacity-50 rounded-3xl"></div>
             <div className="relative">
               <AnchorTag
-                link={projects[1]?.websiteslug}
-                url={projects[1]?.slug}
+                link={projects[3]?.websiteslug}
+                url={projects[3]?.slug}
               />
               <h3 className="text-bold dark:text-white text-3xl text-slate-800 mt-6">
-              {projects[1]?.title}
+              {projects[3]?.title}
             </h3>
             </div>
           </div>

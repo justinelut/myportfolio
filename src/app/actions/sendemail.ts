@@ -2,9 +2,9 @@
 import { ContactTemplate } from "@/components/email/email";
 import { Resend } from "resend";
 import { z } from "zod";
-import { formSchema } from "@/app/contact/form";
+import { ContactSchema } from "@/app/contact/form";
 
-export async function SendEmail(values: z.infer<typeof formSchema>) {
+export async function SendEmail(values: z.infer<typeof ContactSchema>) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const data = await resend.emails.send({

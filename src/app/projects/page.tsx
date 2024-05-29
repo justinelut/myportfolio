@@ -6,7 +6,7 @@ import Navigator from "../navigator";
 export default async function page() {
   
   return (
-    <div className="container mx-auto lg:px-24">
+    <div className="lg:container lg:mx-auto lg:px-24">
         <Projects />
         <Navigator text="Frameworks" url="/frameworks" />
       </div>

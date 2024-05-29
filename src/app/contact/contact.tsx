@@ -8,7 +8,7 @@ import AnchorTag from "../projects/anchor";
 import AnimateItems from "../animate-items";
 import Gmail from "../icons/gmail";
 import LinkedIn from "../icons/linkedin";
-import ContactUs, { ContactForm } from "./form";
+import ContactUs from "./form";
 
 export default function Contact() {
   const placeholderText: {
@@ -17,9 +17,9 @@ export default function Contact() {
     text: string;
   }[] = [{ key: 1, type: "heading1", text: "Gihub" }];
   return (
-    <div className="grid lg:grid-cols-2 gap-x-4">
+    <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-4">
       <div className="h-[600px] w-full flex flex-col gap-4">
-        <div className="h-[200px] w-full grid grid-cols-2 gap-x-4">
+        <div className="h-[200px] w-full grid lg:grid-cols-2 grid-cols-1 gap-4">
           <div className="bg-slate-800 w-full h-[100%] gap-x-4 flex items-center px-4 py-2 rounded-3xl">
             <X className="text-white size-28" />
             <Link
@@ -42,7 +42,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="h-[400px] w-full">
-          <div className="grid grid-cols-2 h-[100%] gap-x-4">
+          <div className="grid lg:grid-cols-2 grid-cols-1 h-[100%] gap-4 lg:mt-0 mt-20">
             <div className="h-[100%] dark:bg-slate-200 w-full rounded-3xl">
               <AnimatedComponent
                 animationType="slide"
@@ -95,7 +95,7 @@ export default function Contact() {
                   <h3>justinequartz@gmail.com</h3>
                 </Link>
               </div>
-              <div className="bg-rose-600 w-full h-[50%] flex flex-col items-start px-6 py-4  gap-x-4 rounded-3xl">
+              <div className="bg-fuchsia-600 w-full h-[50%] flex flex-col items-start px-6 py-4  gap-x-4 rounded-3xl">
                 <Smartphone className="text-slate-300 size-28" />
                 <Link
                   href="tel:+254740455200"
@@ -109,8 +109,8 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="h-[600px] w-full flex flex-col gap-y-4">
-        <div className="w-full bg-slate-300 bg-opacity-50 h-[70%] py-10 rounded-3xl flex flex-col px-24 justify-center">
+      <div className="h-[600px] w-full flex flex-col gap-y-4 lg:mt-0 mt-[360px]">
+        <div className="w-full bg-slate-300 bg-opacity-50 h-[70%] py-10 rounded-3xl flex flex-col lg:px-24 px-2 justify-center">
         <ContactUs />
         </div>
         <div className="w-full bg-blue-500 h-[30%] rounded-3xl flex items-center gap-x-10 px-4 justify-center">
