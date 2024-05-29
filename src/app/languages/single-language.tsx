@@ -59,7 +59,7 @@ export default function SingleLanguage() {
         delay={0.5}
       >
         <div className="lg:h-[500px] relative bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/y041ka7n063gvm8/typescript_TWfjLMIhpp.svg?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
-          <div className="absolute inset-0 bg-slate-300 bg-opacity-50 rounded-3xl"></div>
+          <div className="absolute inset-0 bg-slate-700 bg-opacity-50 rounded-3xl"></div>
           <div className="flex flex-col gap-y-2 relative dark:text-slate-900">
             <div className="flex items-start">
               <h3 className="text-5xl font-bold">
@@ -81,9 +81,9 @@ export default function SingleLanguage() {
             languages.slice(1).map((lang, index) => (
               <div
                 key={index}
-                className="bg-secondary h-[250px] items-center bg-opacity-50 px-8 py-4 rounded-3xl flex flex-row gap-y-6 gap-x-4"
+                className="bg-secondary lg:h-[250px] lg:items-center items-start bg-opacity-50 lg:px-8 px-4 py-4 rounded-3xl flex lg:flex-row flex-col gap-y-6 gap-x-4"
               >
-                {lang?.icon}
+                <div className="flex-shrink-0">{lang?.icon}</div>
                 <div className="flex flex-col gap-y-2">
                   <h3 className="text-3xl font-bold">{lang?.title}</h3>
                   {lang?.info()}

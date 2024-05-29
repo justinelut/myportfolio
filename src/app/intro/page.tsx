@@ -5,6 +5,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navigator from "../navigator";
+import { Metadata } from "next";
+
+export const metadata:Metadata = {
+  title: "About Me",
+  description: "Get to know Justine G, a frontend developer with a passion for React, Next.js, and Tailwind CSS. Discover my journey from barber to tech enthusiast and web developer.",
+  keywords: "Justine G, about me, frontend developer, React, Next.js, Tailwind CSS, web development journey",
+  author: "Justine G",
+  og: {
+    title: "About Me",
+    description: "Get to know Justine G, a frontend developer with a passion for React, Next.js, and Tailwind CSS. Discover my journey from barber to tech enthusiast and web developer.",
+    type: "website",
+    url: "https://www.justinegportfolio.com/about",
+    image: "https://www.justinegportfolio.com/images/about-thumbnail.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Me",
+    description: "Get to know Justine G, a frontend developer with a passion for React, Next.js, and Tailwind CSS. Discover my journey from barber to tech enthusiast and web developer.",
+    image: "https://www.justinegportfolio.com/images/about-thumbnail.png",
+  },
+};
+
 
 export default function page() {
   return (
