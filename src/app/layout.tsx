@@ -82,6 +82,7 @@ export default function RootLayout({
                     backgroundColor: transitionColor,
                     position: "fixed",
                     height: "100vh",
+                    width:'100%',
                     zIndex: 1000,
                     left: 0,
                   }}
@@ -89,7 +90,7 @@ export default function RootLayout({
                   {...animate(slide)}
                 />
               </motion.div>
-              <div className="bg-white dark:bg-slate-950 sticky top-0 flex items-center justify-between">
+              <div className="bg-white dark:bg-slate-950 sticky top-0 z-50 flex items-center justify-between">
                 <div className="lg:pl-10 pl-6">
                   <Link href="/">
                     <Image

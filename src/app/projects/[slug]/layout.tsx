@@ -85,7 +85,7 @@ export default function RootLayout({
                   {...animate(slide)}
                 />
               </motion.div>
-              <div className="bg-white dark:bg-slate-950 sticky top-0">
+              <div className="bg-white dark:bg-slate-950 z-50 sticky top-0">
                 <div className="container w-full mx-auto flex items-center justify-end py-10 gap-6 ">
                   <div className="bg-orange-600 pt-4 z-30 rounded-full items-center justify-center w-12 h-12 px-4 py-2 flex">
                     <ModeToggle />

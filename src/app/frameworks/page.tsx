@@ -7,10 +7,11 @@ import Frameworks from "./frameworks";
 export default function page() {
   return (
     <Move pathN="/projects">
-      <div className="container mx-auto lg:px-24">
+      <div className="lg:container lg:mx-auto lg:px-24 px-4">
         <Frameworks />
         <Navigator text="Projects" url="/projects" />
       </div>
+     
     </Move>
   );
 }

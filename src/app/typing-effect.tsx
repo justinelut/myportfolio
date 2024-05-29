@@ -14,6 +14,7 @@ export default function TypingEffect({ text }: { text: string }) {
             delay: index / 10,
           }}
           key={index}
+          className="text-inherit"
         >
           {char}
           {""}

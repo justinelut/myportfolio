@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Navigator({ text, url }: { text: string, url:string }) {
   return (
-    <div className="flex items-end justify-end self-end sticky bottom-4">
+    <div className="lg:flex hidden items-end justify-end self-end sticky bottom-4">
       <Link
         href={url}
         className="bg-orange-600 rounded-full py-2 mb-4 px-5 flex flex-x-4 items-center"

@@ -9,12 +9,7 @@ import AnchorTag from "./anchor";
 
 export default async function Projects() {
   const projects = await getAllPostsMeta();
-  console.log(projects);
-  const placeholderText: {
-    key: number;
-    type: "heading1" | "heading2" | "paragraph";
-    text: string;
-  }[] = [{ key: 1, type: "heading1", text: "Pixelayout - SaaS" }];
+  
   return (
     <div className="grid lg:grid-cols-2 justify-center gap-10 h-[600px]">
       <div className="flex w-full">
@@ -24,16 +19,17 @@ export default async function Projects() {
           duration={0.3}
           delay={0.5}
         >
-          <div className="lg:h-[550px] relative bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/y041ka7n063gvm8/typescript_TWfjLMIhpp.svg?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
-            <div className="absolute inset-0 bg-slate-300 bg-opacity-50 rounded-3xl"></div>
+          <div className={`lg:h-[550px] relative bg-cover bg-center p-8  bg-opacity-50 rounded-3xl flex flex-col gap-y-6`}>
+            <Image className="w-full inset-0 h-full rounded-3xl absolute object-cover" src={projects[0]?.image} height={1000} width={1000} alt={projects[0]?.title} />
+            <div className="absolute inset-0 bg-slate-600 bg-opacity-50 rounded-3xl"></div>
             <div className="flex flex-col gap-y-2 relative rounded-3xl dark:text-slate-900">
               <div className="flex items-start">
                 <h3 className="text-5xl font-bold">
-                  <AnimateItems text={placeholderText} />
+                  <AnimateItems text={[{ key: 1, type: "heading1", text: projects[0]?.title }]} />
                 </h3>
               </div>
-              Pixel Layout - A Saas platform
-              <AnchorTag link="/" url="/" />
+             
+              <AnchorTag link={projects[0]?.websiteslug} url={`/projects/${projects[0]?.slug}`} />
             </div>
           </div>
         </AnimatedComponent>
@@ -63,7 +59,7 @@ export default async function Projects() {
             <div className="relative">
               <AnchorTag
                 link={projects[1]?.websiteslug}
-                url={projects[1]?.slug}
+                url={`/projects/projects[1]?.slug`}
               />
                <h3 className="text-bold dark:text-white text-3xl text-slate-800 mt-6">
               {projects[1]?.title}

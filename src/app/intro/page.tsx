@@ -9,9 +9,9 @@ import Navigator from "../navigator";
 export default function page() {
   return (
     <Move pathN="/languages">
-      <div className="container mx-auto lg:h-screen max-w-7xl pt-4">
+      <div className="lg:container lg:mx-auto lg:h-screen lg:max-w-7xl pt-4 px-4">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 justify-between">
-          <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-10">
+          <div className="flex flex-col items-stretch lg:w-[44%] max-md:w-full lg:ml-10">
             <span className="flex flex-col my-auto pb-2.5 max-md:max-w-full max-md:mt-10">
               <span className="items-center flex gap-4 self-start">
                 <div className="text-2xl self-stretch grow whitespace-nowrap">
@@ -27,7 +27,7 @@ export default function page() {
                 direction="up"
                 duration={1.5}
               >
-                <div className="text-2xl leading-9 self-stretch mt-10 max-md:max-w-full dark:text-black rounded-3xl lg:p-4 bg-orange-100">
+                <div className="text-2xl leading-9 self-stretch mt-10 max-md:max-w-full dark:text-black rounded-3xl p-4 bg-orange-100">
                   As a Frontend Web Developer, The key driving factors that keep
                   me passionate in my profession include the constant evolution
                   of web technologies, the creative challenges of designing
@@ -65,7 +65,7 @@ export default function page() {
                     height={1000}
                     alt="Olestones Builders"
                     src="https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/x3hc9nx60dbfu4t/icon_JQ0FlGVG6U.png?token="
-                    className="aspect-square object-contain object-center w-[52px] overflow-hidden shrink-0 max-w-full"
+                    className="object-contain object-center w-[52px] overflow-hidden shrink-0 max-w-full"
                   />
                   <div className="text-center text-xl font-bold self-center grow whitespace-nowrap my-auto">
                     Olestones Builders
@@ -82,11 +82,11 @@ export default function page() {
             >
               <Image
                 loading="lazy"
-                width={1000}
+                width={1200}
                 height={1000}
                 alt="Olestones Builders"
                 src="https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/mxbwu49exadjgpm/portrait_1_tPet10eAvs.webp?token="
-                className="object-contain object-center w-full self-end overflow-hidden shrink-0 max-w-full"
+                className="object-contain object-center w-[100%] self-end overflow-hidden shrink-0 max-w-full"
               />
             </AnimatedComponent>
             
