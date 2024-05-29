@@ -6,10 +6,10 @@ import ProfessionalExperience from "./professional-experience";
 
 export default function page() {
   return (
-    <Move pathN="/frameworks">
-      <div className="container mx-auto lg:px-24">
+    <Move pathN="/contact">
+      <div className="lg:container lg:mx-auto lg:px-24">
         <ProfessionalExperience />
-        <Navigator text="Frameworks" url="/frameworks" />
+        <Navigator text="Contact me" url="/contact" />
       </div>
     </Move>
   );

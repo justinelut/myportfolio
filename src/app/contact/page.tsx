@@ -5,10 +5,10 @@ import Contact from "./contact";
 
 export default function page(){
   return (
-    <Move pathN="/frameworks">
+    <Move pathN="/">
       <div className="lg:container lg:mx-auto px-4 lg:px-24">
         <Contact />
-        <Navigator text="Frameworks" url="/frameworks" />
+        <Navigator text="Home" url="/" />
       </div>
     </Move>
   );

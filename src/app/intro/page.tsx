@@ -8,7 +8,7 @@ import Navigator from "../navigator";
 
 export default function page() {
   return (
-    <Move pathN="/languages">
+    <Move pathN="/projects">
       <div className="lg:container lg:mx-auto lg:h-screen lg:max-w-7xl pt-4 px-4">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 justify-between">
           <div className="flex flex-col items-stretch lg:w-[44%] max-md:w-full lg:ml-10">
