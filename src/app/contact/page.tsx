@@ -4,36 +4,21 @@ import Navigator from "../navigator";
 import Contact from "./contact";
 import { Metadata } from "next";
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   title: "Contact Me",
-  description: "Get in touch with Justine G for collaboration opportunities, inquiries, or just to say hello! Reach out via email or connect on social media.",
+  description:
+    "Get in touch with me for collaboration opportunities, inquiries, or just to say hello! Reach out via email or connect on social media.",
   keywords: "Justine G, contact, collaboration, inquiry, social media, email",
-  author: "Justine G",
-  og: {
-    title: "Contact Me",
-    description: "Get in touch with Justine G for collaboration opportunities, inquiries, or just to say hello! Reach out via email or connect on social media.",
-    type: "website",
-    url: "https://www.justinegportfolio.com/contact",
-    image: "https://www.justinegportfolio.com/images/contact-thumbnail.png",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact Me",
-    description: "Get in touch with Justine G for collaboration opportunities, inquiries, or just to say hello! Reach out via email or connect on social media.",
-    image: "https://www.justinegportfolio.com/images/contact-thumbnail.png",
+  openGraph: {
+    images: ["https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/u20f6e2nk2wm2lx/image_processing20200813_478_6hj4av_b3vp0sUVMN.jpg?token="],
   },
 };
 
-
-export default function page(){
+export default function page() {
   return (
-    <Move pathN="/">
-      <div className="lg:container lg:mx-auto px-4 lg:px-24">
-        <Contact />
-        <Navigator text="Home" url="/" />
-      </div>
-    </Move>
+    <div className="lg:container lg:mx-auto px-4 lg:px-24">
+      <Contact />
+      <Navigator text="Home" url="/" />
+    </div>
   );
 }
-
-

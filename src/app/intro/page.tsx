@@ -9,21 +9,10 @@ import { Metadata } from "next";
 
 export const metadata:Metadata = {
   title: "About Me",
-  description: "Get to know Justine G, a frontend developer with a passion for React, Next.js, and Tailwind CSS. Discover my journey from barber to tech enthusiast and web developer.",
+  description: "Get to know me, a frontend developer with a passion for React, Next.js, and Tailwind CSS. Discover my journey from barber to tech enthusiast and web developer.",
   keywords: "Justine G, about me, frontend developer, React, Next.js, Tailwind CSS, web development journey",
-  author: "Justine G",
-  og: {
-    title: "About Me",
-    description: "Get to know Justine G, a frontend developer with a passion for React, Next.js, and Tailwind CSS. Discover my journey from barber to tech enthusiast and web developer.",
-    type: "website",
-    url: "https://www.justinegportfolio.com/about",
-    image: "https://www.justinegportfolio.com/images/about-thumbnail.png",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Me",
-    description: "Get to know Justine G, a frontend developer with a passion for React, Next.js, and Tailwind CSS. Discover my journey from barber to tech enthusiast and web developer.",
-    image: "https://www.justinegportfolio.com/images/about-thumbnail.png",
+  openGraph: {
+    images: ["https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/mxbwu49exadjgpm/portrait_1_tPet10eAvs.webp?token="],
   },
 };
 
@@ -106,7 +95,7 @@ export default function page() {
                 loading="lazy"
                 width={1200}
                 height={1000}
-                alt="Olestones Builders"
+                alt="Justine Gichana"
                 src="https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/mxbwu49exadjgpm/portrait_1_tPet10eAvs.webp?token="
                 className="object-contain object-center w-[100%] self-end overflow-hidden shrink-0 max-w-full"
               />

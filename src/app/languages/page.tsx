@@ -6,22 +6,8 @@ import { Metadata } from "next";
 
 export const metadata:Metadata = {
   title: "Programming Languages",
-  description: "Explore the programming languages that Justine G excels in. From JavaScript to TypeScript and beyond, discover the tools that power my web development projects.",
+  description: "Explore the programming languages that i excel in. From JavaScript to TypeScript and beyond, discover the tools that power my web development projects.",
   keywords: "Justine G, programming languages, JavaScript, TypeScript, web development, frontend developer",
-  author: "Justine G",
-  og: {
-    title: "Programming Languages",
-    description: "Explore the programming languages that Justine G excels in. From JavaScript to TypeScript and beyond, discover the tools that power my web development projects.",
-    type: "website",
-    url: "https://www.justinegportfolio.com/programming-languages",
-    image: "https://www.justinegportfolio.com/images/programming-languages-thumbnail.png",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Programming Languages",
-    description: "Explore the programming languages that Justine G excels in. From JavaScript to TypeScript and beyond, discover the tools that power my web development projects.",
-    image: "https://www.justinegportfolio.com/images/programming-languages-thumbnail.png",
-  },
 };
 
 

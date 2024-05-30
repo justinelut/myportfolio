@@ -2,26 +2,13 @@ import * as React from "react";
 import BlogGrid from "./blog-grid";
 import Move from "../move";
 import Navigator from "../navigator";
-import BlogLoader from "./blog-loader";
+
 
 export const metadata = {
   title: "Blog",
-  description: "Read Justine G's latest articles and insights on frontend development, web design, and more. Explore tutorials, tips, and industry trends to stay updated and inspired.",
+  description: "Read Justine my latest articles and insights on frontend development, web design, and more. Explore tutorials, tips, and industry trends to stay updated and inspired.",
   keywords: "Justine G, blog, frontend development, web design, tutorials, tips, industry trends",
   author: "Justine G",
-  og: {
-    title: "Blog",
-    description: "Read Justine G's latest articles and insights on frontend development, web design, and more. Explore tutorials, tips, and industry trends to stay updated and inspired.",
-    type: "website",
-    url: "https://www.justinegportfolio.com/blog",
-    image: "https://www.justinegportfolio.com/images/blog-thumbnail.png",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Blog",
-    description: "Read Justine G's latest articles and insights on frontend development, web design, and more. Explore tutorials, tips, and industry trends to stay updated and inspired.",
-    image: "https://www.justinegportfolio.com/images/blog-thumbnail.png",
-  },
 };
 
 

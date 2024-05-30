@@ -31,8 +31,6 @@ const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({ subsets: ["vietnamese"] });
 const leaguspatan = League_Spartan({ subsets: ["latin"] });
 
-
-
 export default function MainLayout({
   children,
 }: {
@@ -106,7 +104,6 @@ export default function MainLayout({
                 </div>
 
                 <div className="container w-full mx-auto flex items-center justify-end py-10 gap-6 ">
-                  <h3>Justine Gichana</h3>
                   <div className="bg-orange-600 pt-4 z-30 rounded-full items-center justify-center w-12 h-12 px-4 py-2 flex">
                     <ModeToggle />
                   </div>

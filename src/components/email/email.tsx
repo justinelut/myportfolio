@@ -1,4 +1,5 @@
-import { formSchema } from "@/app/contact/form";
+
+import { ContactSchema } from "@/app/contact/form";
 import {
   Body,
   Container,
@@ -13,10 +14,10 @@ import {
 import * as React from "react";
 import { z } from "zod";
 
-export const ContactTemplate = (userdetails: z.infer<typeof formSchema>) => (
+export const ContactTemplate = (userdetails: z.infer<typeof ContactSchema>) => (
   <Html>
     <Head />
-    <Preview>{userdetails.location}</Preview>
+    <Preview>{userdetails.subject}</Preview>
     <Body style={main}>
       <Container style={container}>
         <Section style={paragraphContent}>
@@ -28,19 +29,14 @@ export const ContactTemplate = (userdetails: z.infer<typeof formSchema>) => (
         </Section>
         <Section style={paragraphContent}>
           <Hr style={hr} />
-          <Text style={heading}>{userdetails.organization}</Text>
-          <Text style={paragraph}>{userdetails.fullnames}</Text>
-          <Text style={paragraph}>{userdetails.email}</Text>
-          <Text style={paragraph}>{userdetails.description}</Text>
-          <Text style={paragraph}>{userdetails.location}</Text>
-          <Text style={paragraph}>{userdetails.phonenumber}</Text>
-          <Text style={paragraph}>{userdetails.website}</Text>
+          
+          <Text style={paragraph}>{userdetails?.message}</Text>
         </Section>
 
         <Section style={paragraphContent}>
           <Text style={paragraph}>Thank you,</Text>
           <Text style={{ ...paragraph, fontSize: "20px" }}>
-            {userdetails.fullnames}
+            {userdetails.email}
           </Text>
         </Section>
 
@@ -64,7 +60,7 @@ export const ContactTemplate = (userdetails: z.infer<typeof formSchema>) => (
             }}
           >
             You have received this improtant email from{" "}
-            <a href="https://me.pixelayout.site">Me. Pixelayout</a>
+            <a href="https://me.pixelayout.site">Me. Pixelayout</a> <br></br>
             Please respond to it as soon as possible as it maybe a client
             looking to work with you.
           </Text>

@@ -1,6 +1,7 @@
 import { GetStaticPropsContext } from "next";
 import { getPostBySlug } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Image from "next/image";
 
 interface Params {
   slug: string;
@@ -33,8 +34,23 @@ interface PageProps {
 
 const Page = async ({ params }: PageProps) => {
   const { content } = await getPageContent(params.slug);
+  const { meta } = await getPageContent(params.slug);
 
-  return <div className="py-4 prose dark:prose-invert">{content}</div>;
-};
+  return (
+    <>
+      {meta.image && (
+        <Image
+          src={meta.image}
+          alt={meta.title}
+          width={720}
+          height={405}
+          className="my-8 rounded-md border bg-muted transition-colors"
+          priority
+        />
+      )}
+      <div className="py-4 prose dark:prose-invert">{content}</div>
+    </>
+  )
+}
 
 export default Page;

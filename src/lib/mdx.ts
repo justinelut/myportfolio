@@ -10,6 +10,7 @@ import { buttonVariants } from "@/components/ui/button";
 import Nextjs from "@/app/icons/nextjs";
 import Pocketbase from "@/app/icons/pocketbase";
 import TailwindCSS from "@/app/icons/tailwind";
+import Ghostcms from "@/app/icons/ghostcms";
 
 const components = {
   // Define components here
@@ -22,6 +23,7 @@ const components = {
   Pocketbase,
   Search,
   TailwindCSS,
+  Ghostcms
 };
 
 const rootDirectory = path.join(process.cwd(), "src", "app/content");

@@ -24,6 +24,7 @@ import { Icons } from "@/components/icons";
 import Link from "next/link";
 import QueryProvider from "@/app/query-provider";
 import { MainMenu } from "../../mainmenu";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -85,7 +86,18 @@ export default function RootLayout({
                   {...animate(slide)}
                 />
               </motion.div>
-              <div className="bg-white dark:bg-slate-950 z-50 sticky top-0">
+              <div className="bg-white dark:bg-slate-950 sticky top-0 z-50 flex items-center justify-between">
+              <div className="lg:pl-10 pl-6">
+                  <Link href="/">
+                    <Image
+                      src="/logo.png"
+                      width={1000}
+                      height={1000}
+                      alt="Logo"
+                      className="lg:scale-50 lg:w-[30%] w-[40%]"
+                    />
+                  </Link>
+                </div>
                 <div className="container w-full mx-auto flex items-center justify-end py-10 gap-6 ">
                   <div className="bg-orange-600 pt-4 z-30 rounded-full items-center justify-center w-12 h-12 px-4 py-2 flex">
                     <ModeToggle />

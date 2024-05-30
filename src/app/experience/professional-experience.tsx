@@ -19,19 +19,19 @@ export default function ProfessionalExperience() {
             <GraduationCap />
           </div>
         </div>
-        <div className="bg-slate-300 p-6 bg-opacity-50 rounded-3xl w-full h-[50%] grid grid-cols-2">
+        <div className="bg-slate-300 p-6 bg-opacity-50 rounded-3xl w-full h-[50%] lg:gap-y-0 gap-y-6 grid grid-cols-2">
           
           <p className="font-bold text-3xl">Other skills</p>
           <div className="">
-            <BetweenHorizontalStart />
+            <BetweenHorizontalStart size={60} />
             <p className="text-stone-700 dark:text-gray-100 font-bold mt-3 text-xl">Api integration</p>
             </div>
           <div className="">
-            <Settings/>
+            <Settings size={60}/>
             <p className="text-stone-700 dark:text-gray-100 font-bold mt-3 text-xl">Performance optimization</p>
           </div>
           <div className="">
-            <MonitorSmartphone />
+            <MonitorSmartphone size={60} />
             <p className="text-stone-700 dark:text-gray-100 font-bold mt-3 text-xl">Responsive design</p>
           </div>
         </div>
