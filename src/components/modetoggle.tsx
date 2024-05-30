@@ -12,12 +12,14 @@ export function ModeToggle() {
     };
 
     if (theme === "light" || theme === "system") {
+     
       return (
         <motion.button
           variants={buttonVariants}
           initial="hidden"
           animate="visible"
           onClick={() => setTheme("dark")}
+          className="bg-orange-600 z-30 rounded-full items-center justify-center w-12 h-12 px-4 py-2 flex"
         >
           <Moon />
         </motion.button>
@@ -29,6 +31,7 @@ export function ModeToggle() {
           initial="hidden"
           animate="visible"
           onClick={() => setTheme("light")}
+          className="bg-orange-600 z-30 rounded-full items-center justify-center w-12 h-12 px-4 py-2 flex"
         >
           <Sun />
         </motion.button>

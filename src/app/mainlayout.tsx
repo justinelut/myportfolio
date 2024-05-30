@@ -104,9 +104,9 @@ export default function MainLayout({
                 </div>
 
                 <div className="container w-full mx-auto flex items-center justify-end py-10 gap-6 ">
-                  <div className="bg-orange-600 pt-4 z-30 rounded-full items-center justify-center w-12 h-12 px-4 py-2 flex">
+                 
                     <ModeToggle />
-                  </div>
+                  
 
                   <MainMenu />
 
@@ -127,6 +127,7 @@ export default function MainLayout({
               </div>
 
               {children}
+              
             </AnimatePresence>
           </ThemeProvider>
         </QueryProvider>

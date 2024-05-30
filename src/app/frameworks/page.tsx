@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <Move pathN="/blog">
-      <div className="lg:container lg:mx-auto lg:px-24 px-4">
+      <div className="lg:container lg:mx-auto lg:px-24 px-4 h-screen">
         <Frameworks />
         <Navigator text="Blog" url="/blog" />
       </div>

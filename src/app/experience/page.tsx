@@ -14,7 +14,7 @@ export const metadata:Metadata = {
 export default function page() {
   return (
     <Move pathN="/contact">
-      <div className="lg:container lg:mx-auto lg:px-24">
+      <div className="lg:container lg:mx-auto lg:px-24 h-screen">
         <ProfessionalExperience />
         <Navigator text="Contact me" url="/contact" />
       </div>
