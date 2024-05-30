@@ -85,7 +85,7 @@ export default function page() {
               </div>{" "}
             </span>
           </div>{" "}
-          <div className="flex flex-col h-screen lg:w-[56%] max-md:w-full max-md:ml-0 justify-center">
+          <div className="flex flex-col lg:w-[56%] max-md:w-full max-md:ml-0 justify-center">
             <AnimatedComponent
               animationType="slide"
               direction="left"

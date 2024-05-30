@@ -127,7 +127,7 @@ export default function MainLayout({
               </div>
 
               {children}
-              
+              <div className="lg:mt-0 mt-10"></div>
             </AnimatePresence>
           </ThemeProvider>
         </QueryProvider>
