@@ -18,7 +18,13 @@ export async function generateMetadata({
     throw new Error("Slug parameter is missing");
   }
   const { meta } = await getPageContent(params.slug);
-  return { title: meta.title };
+  return {
+    title: meta?.title, // Fixed reference to blogbody.title
+    description: meta.description,
+    openGraph: {
+      images: [meta.image],
+    },
+  };
 }
 
 interface PageProps {
@@ -28,9 +34,7 @@ interface PageProps {
 const Page = async ({ params }: PageProps) => {
   const { content } = await getPageContent(params.slug);
 
-  return (
-    <div className="py-4 prose dark:prose-invert">{content}</div>
-  );
+  return <div className="py-4 prose dark:prose-invert">{content}</div>;
 };
 
 export default Page;
