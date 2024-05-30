@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 type AnimationType = 'fade' | 'slide';
 type Direction = 'up' | 'down' | 'left' | 'right';
@@ -13,13 +13,12 @@ interface AnimationProps {
   children: React.ReactNode;
 }
 
-
 const getAnimationVariants = (
   animationType: AnimationType,
   direction?: Direction,
   duration?: number,
   delay?: number
-) => {
+): Variants => {
   const durationValue = duration ?? 0.5;
   const delayValue = delay ?? 0;
 
@@ -88,7 +87,7 @@ const AnimatedComponent: React.FC<AnimationProps> = ({
         animate="visible"
         exit="exit"
         variants={variants}
-        className='w-[100%] h-[100%]'
+        className="w-[100%] h-[100%]"
       >
         {children}
       </motion.div>

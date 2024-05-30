@@ -12,9 +12,7 @@ const getPageContent = async (slug: string) => {
   return { meta, content };
 };
 
-export async function generateMetadata({
-  params,
-}: GetStaticPropsContext<Params>) {
+export async function generateMetadata({ params }: { params: any }) {
   if (!params?.slug) {
     throw new Error("Slug parameter is missing");
   }
@@ -50,7 +48,7 @@ const Page = async ({ params }: PageProps) => {
       )}
       <div className="py-4 prose dark:prose-invert">{content}</div>
     </>
-  )
-}
+  );
+};
 
 export default Page;

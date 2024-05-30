@@ -13,7 +13,6 @@ import TailwindCSS from "@/app/icons/tailwind";
 import Ghostcms from "@/app/icons/ghostcms";
 
 const components = {
-  // Define components here
   Link,
   Image,
   Check,
@@ -53,12 +52,13 @@ export const getPostBySlug = async (slug: string): Promise<Post> => {
 
   const fileContent = fs.readFileSync(filePath, { encoding: "utf8" });
 
+  // @ts-ignore
   const { frontmatter, content } = await compileMDX<Frontmatter>({
     source: fileContent,
     options: { parseFrontmatter: true },
     components: components,
   });
-
+// @ts-ignore
   return { meta: { ...frontmatter, slug: realSlug }, content };
 };
 
