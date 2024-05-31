@@ -49,7 +49,7 @@ export default function Frameworks() {
         </AnimatedComponent>
       </div>
 
-      <div className="flex flex-row lg:w-[55%] w-full gap-10 lg:mt-0 mt-[230px] lg:h-[600px] h-full">
+      <div className="flex flex-row lg:w-[55%] w-full gap-10 lg:mt-0 mt-[220px] lg:h-[600px] h-full">
         <div className="w-full flex flex-col gap-6">
           <div className="w-full gap-4 flex lg:flex-row flex-col lg:h-[400px] h-full">
             <div className="flex flex-col gap-4 lg:w-[40%] w-full">
