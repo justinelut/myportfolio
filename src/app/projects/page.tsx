@@ -15,9 +15,13 @@ export const metadata: Metadata = {
 export default async function page() {
   return (
     <Move pathN="/languages">
-      <div className="lg:container lg:mx-auto lg:px-24 px-4">
+      <div className="lg:container lg:mx-auto lg:px-24 px-4 h-screen">
         <Projects />
-        <Navigator text="Programming Languages" url="/languages" />
+        <Navigator
+          text="Programming Languages"
+          url="/languages"
+          className="hidden"
+        />
       </div>
     </Move>
   );

@@ -31,8 +31,8 @@ export default function Frameworks() {
           duration={0.3}
           delay={0.5}
         >
-          <div className="h-[500px] relative bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/cket277wy29q5go/nextjs_icon_dark_wZoDIbfcOV.png?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
-            <div className="absolute inset-0 bg-slate-300 bg-opacity-50 rounded-3xl "></div>
+          <div className="lg:h-[500px] h-full relative bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/cket277wy29q5go/nextjs_icon_dark_wZoDIbfcOV.png?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
+            <div className="absolute inset-0 bg-slate-300 h-[100%] bg-opacity-50 rounded-3xl "></div>
             <div className="flex flex-col gap-y-2 relative dark:text-slate-900">
               <div className="flex items-start">
                 <h3 className="text-5xl font-bold">
@@ -49,9 +49,9 @@ export default function Frameworks() {
         </AnimatedComponent>
       </div>
 
-      <div className="flex flex-row lg:w-[55%] w-full gap-10 lg:mt-0 mt-[220px] h-[600px]">
+      <div className="flex flex-row lg:w-[55%] w-full gap-10 lg:mt-0 mt-[300px] lg:h-[600px] h-full">
         <div className="w-full flex flex-col gap-6">
-          <div className="w-full gap-4 flex lg:flex-row flex-col h-[400px]">
+          <div className="w-full gap-4 flex lg:flex-row flex-col lg:h-[400px] h-full">
             <div className="flex flex-col gap-4 lg:w-[40%] w-full">
               <AnimatedComponent
                 animationType="slide"
@@ -59,7 +59,7 @@ export default function Frameworks() {
                 duration={0.3}
                 delay={0.5}
               >
-                <div className="relative h-[180px] bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/n0etw9h00dn6cfj/nextjs_icon_dark_2pQKwPgwlq.png?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
+                <div className="relative lg:h-[180px] bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/n0etw9h00dn6cfj/nextjs_icon_dark_2pQKwPgwlq.png?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
                   <div className="absolute inset-0 bg-slate-300 bg-opacity-50 rounded-3xl"></div>
                   <div className="flex flex-col gap-y-2 relative dark:text-slate-900">
                     <div className="flex items-start">
@@ -88,7 +88,7 @@ export default function Frameworks() {
               </AnimatedComponent>
             </div>
 
-            <div className="flex flex-col bg-green-600 bg-opacity-50 h-400 rounded-3xl py-4 px-10 w-full lg:w-[60%]">
+            <div className="flex flex-col bg-green-600 bg-opacity-50 lg:h-400 rounded-3xl py-4 px-10 w-full lg:w-[60%]">
               <AnimatedComponent
                 animationType="slide"
                 direction="left"
@@ -108,7 +108,7 @@ export default function Frameworks() {
             </div>
           </div>
 
-          <div className="w-full flex lg:flex-row flex-col lg:mt-0 mt-[400px] gap-4 h-[200px]">
+          <div className="w-full flex lg:flex-row flex-col gap-4 lg:h-[200px]">
             <div className="bg-orange-600 bg-opacity-40 rounded-3xl py-10 px-10 lg:w-[70%] w-full">
               <AnimatedComponent
                 animationType="slide"

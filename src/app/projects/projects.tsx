@@ -11,7 +11,7 @@ export default async function Projects() {
   const projects = await getAllPostsMeta();
   
   return (
-    <div className="grid lg:grid-cols-2 grid-cols-1 justify-center gap-10 h-[600px]">
+    <div className="grid lg:grid-cols-2 grid-cols-1 justify-center gap-10 lg:h-[600px] h-screen">
       <div className="flex w-full">
         <AnimatedComponent
           animationType="slide"
@@ -19,8 +19,8 @@ export default async function Projects() {
           duration={0.3}
           delay={0.5}
         >
-          <div className={`lg:h-[550px] relative bg-cover bg-center p-8 bg-opacity-50 rounded-3xl flex flex-col gap-y-6`}>
-            <Image className="inset-0 h-[100%] w-[100%] rounded-3xl absolute object-cover" src={projects[3]?.image} height={1000} width={1000} alt={projects[3]?.title} />
+          <div className={`lg:h-[550px] h-full relative bg-cover bg-center p-8 bg-opacity-50 rounded-3xl flex flex-col gap-y-6`}>
+            <Image className="inset-0 lg:h-[100%] h-full w-[100%] rounded-3xl absolute object-cover" src={projects[3]?.image} height={1000} width={1000} alt={projects[3]?.title} />
             <div className="absolute inset-0 bg-slate-600 bg-opacity-90 rounded-3xl"></div>
             <div className="flex flex-col gap-y-2 relative rounded-3xl dark:text-slate-900">
               <div className="flex items-start">
@@ -35,13 +35,13 @@ export default async function Projects() {
         </AnimatedComponent>
       </div>
       <div className="flex gap-y-4 flex-col lg:h-[550px] h-full items-center justify-center">
-        <div className="bg-slate-300 bg-opacity-40 w-full lg:h-[275px] h-full items-center lg:py-0 py-10 px-4 lg:px-0 gap-x-6 rounded-3xl flex lg:flex-row flex-col">
+        <div className="bg-slate-300 bg-opacity-40 w-full lg:h-[275px]  items-center lg:py-0 py-10 px-4 lg:px-0 gap-x-6 rounded-3xl flex lg:flex-row flex-col">
           <Image
             src={projects[1]?.image}
             alt={projects[1]?.title}
             height={1000}
             width={1000}
-            className="object-cover lg:w-[50%] w-full h-full rounded-3xl"
+            className="object-cover lg:w-[50%] w-full rounded-3xl"
           />
           <div className="flex flex-col lg:mt-0 mt-4">
             <h3 className="text-bold dark:text-white text-3xl text-slate-800">

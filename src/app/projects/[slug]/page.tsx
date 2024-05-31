@@ -35,7 +35,7 @@ const Page = async ({ params }: PageProps) => {
   const { meta } = await getPageContent(params.slug);
 
   return (
-    <>
+    <div className="container mx-auto max-w-6xl flex flex-col items-center">
       {meta.image && (
         <Image
           src={meta.image}
@@ -47,7 +47,7 @@ const Page = async ({ params }: PageProps) => {
         />
       )}
       <div className="py-4 prose dark:prose-invert">{content}</div>
-    </>
+    </div>
   );
 };
 
