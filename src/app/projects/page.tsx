@@ -17,7 +17,7 @@ export default async function page() {
     <Move pathN="/languages">
       <div className="lg:container lg:mx-auto lg:px-24 px-4">
         <Projects />
-        <Navigator text="P. Languages" url="/languages" />
+        <Navigator text="Programming Languages" url="/languages" />
       </div>
     </Move>
   );
