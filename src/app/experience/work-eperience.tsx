@@ -1,4 +1,5 @@
 interface ExperienceProps {
+  company:string;
   year: string;
   title: string;
   description: () => JSX.Element;
@@ -6,6 +7,7 @@ interface ExperienceProps {
 
 const workExperience: ExperienceProps[] = [
   {
+    company: "Ray Barber shop",
     year: "Feb 2022 - May 2023",
     title: "Barber",
     description: () => (
@@ -17,6 +19,7 @@ const workExperience: ExperienceProps[] = [
     ),
   },
   {
+    company: "Lanet Computer School",
     year: "July 2023 - Feb 2024",
     title: "Computer Administrator",
     description: () => (
@@ -28,6 +31,7 @@ const workExperience: ExperienceProps[] = [
     ),
   },
   {
+    company: "Olestones Builders",
     year: "March 2024 - Apr 2024",
     title: "Frontend Developer",
     description: () => (
@@ -78,7 +82,7 @@ export const WorkExperience = () => {
               </div>
               <div className="pt-1 pb-8">
                 <p className="mb-2 text-lg text-white font-extrabold">{experience.title}</p>
-                <p className="mb-2 text-lg text-white font-extrabold">{experience.year}</p>
+                <p className="mb-2 text-lg text-white font-extrabold">{experience?. experience.year}</p>
                 <div className="text-gray-200">{experience.description()}</div>
               </div>
             </div>
