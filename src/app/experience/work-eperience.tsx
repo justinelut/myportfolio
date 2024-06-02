@@ -82,7 +82,7 @@ export const WorkExperience = () => {
               </div>
               <div className="pt-1 pb-8">
                 <p className="mb-2 text-lg text-white font-extrabold">{experience.title}</p>
-                <p className="mb-2 text-lg text-white font-extrabold">{experience?. experience.year}</p>
+                <p className="mb-2 text-lg text-white font-extrabold">{experience?.company + " " + experience.year}</p>
                 <div className="text-gray-200">{experience.description()}</div>
               </div>
             </div>
