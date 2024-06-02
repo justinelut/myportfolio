@@ -1,5 +1,5 @@
 interface ExperienceProps {
-  company:string;
+  company: string;
   year: string;
   title: string;
   description: () => JSX.Element;
@@ -36,7 +36,10 @@ const workExperience: ExperienceProps[] = [
     title: "Frontend Developer",
     description: () => (
       <ul>
-        <li>Developed and maintained the company's website using React, Next.js, and Tailwind CSS.</li>
+        <li>
+          Developed and maintained the company's website using React, Next.js,
+          and Tailwind CSS.
+        </li>
         <li>Integrated backend services such as Supabase and Pocketbase.</li>
         <li>Implemented payment solutions using Paystack and Stripe.</li>
       </ul>
@@ -81,8 +84,12 @@ export const WorkExperience = () => {
                 <div className="w-px h-full bg-gray-300" />
               </div>
               <div className="pt-1 pb-8">
-                <p className="mb-2 text-lg text-white font-extrabold">{experience.title}</p>
-                <p className="mb-2 text-lg text-white font-extrabold">{experience?.company + " " + experience.year}</p>
+                <p className="mb-2 text-lg text-white font-extrabold">
+                  {experience.title}
+                </p>
+                <p className="mb-2 text-lg text-white font-extrabold">
+                  {experience?.company + " " + `(${experience.year})`}
+                </p>
                 <div className="text-gray-200">{experience.description()}</div>
               </div>
             </div>
