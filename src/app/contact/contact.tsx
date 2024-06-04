@@ -33,7 +33,7 @@ export default function Contact() {
           <div className="bg-green-600 w-full h-[100%] flex items-center px-4 py-2  gap-x-4 rounded-3xl">
             <WhatsApp className="text-white size-28" />
             <Link
-              href="https://x.com/justinegichana7"
+              href="https://wa.me/254740455200"
               className="flex underline items-center gap-x-2 text-gray-300"
             >
               <AtSign size={18} />
