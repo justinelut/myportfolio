@@ -16,7 +16,7 @@ export default function page() {
     <Move pathN="/contact">
       <div className="lg:container lg:mx-auto lg:px-24 h-screen">
         <ProfessionalExperience />
-        <Navigator text="Contact me" url="/contact" />
+        {/* <Navigator text="Contact me" url="/contact" /> */}
       </div>
     </Move>
   );

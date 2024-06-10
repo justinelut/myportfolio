@@ -21,6 +21,8 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import Link from "next/link";
+import YoutubeVideo from "./videos/youtube-video";
+import { AnimatePresence, Spring, motion } from "framer-motion";
 
 const links = [
   {
@@ -61,6 +63,10 @@ const links = [
 ];
 
 export function MainMenu() {
+  const containerVariants = {
+    hidden: { opacity: 0, y: -40 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <Sheet>
       <SheetTrigger asChild className="text-white">
@@ -72,7 +78,17 @@ export function MainMenu() {
         </Button>
       </SheetTrigger>
       <SheetContent className="bg-opacity-70 bg-orange-600 min-w-full">
-        <div className="flex flex-col lg:items-end justify-center py-20 text-white h-screen pr-10 gap-y-10">
+        <div className="grid lg:grid-cols-2 grid-cols-1 justify-between lg:pt-20 items-center h-screen">
+        <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="text-2xl leading-8 max-w-full w-[100%] max-md:mt-0"
+          >
+        <YoutubeVideo video_id="hlwlM4a5rxg" />
+        </motion.div>
+        <div className="flex flex-col lg:items-end justify-center pb-20 pt-6  text-white pr-10 gap-y-10">
           {links &&
             links.map((link, index) => (
               <Link
@@ -84,6 +100,7 @@ export function MainMenu() {
                 <ArrowRight size={30} />
               </Link>
             ))}
+        </div>
         </div>
       </SheetContent>
     </Sheet>

@@ -79,3 +79,12 @@
 body{
   font-family: 'Playfair Display', serif;
 }
+
+
+
+.text-gradient_orange-green {
+  background: linear-gradient(90deg, #1ea171 0%, rgba(255, 113, 19, 0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

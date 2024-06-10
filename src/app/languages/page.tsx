@@ -16,7 +16,7 @@ export default function page() {
     <Move pathN="/frameworks">
       <div className="lg:container lg:mx-auto lg:px-24 px-4">
         <SingleLanguage />
-        <Navigator text="Frameworks" url="/frameworks" />
+        {/* <Navigator text="Frameworks" url="/frameworks" /> */}
       </div>
     </Move>
   );

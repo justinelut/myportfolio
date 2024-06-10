@@ -18,7 +18,7 @@ export default function page() {
   return (
     <div className="lg:container lg:mx-auto px-4 lg:px-24 h-screen">
       <Contact />
-      <Navigator text="Home" url="/" />
+      {/* <Navigator text="Home" url="/" /> */}
     </div>
   );
 }

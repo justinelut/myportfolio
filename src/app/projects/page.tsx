@@ -3,6 +3,7 @@ import Projects from "./projects";
 import Navigator from "../navigator";
 import Move from "../move";
 import { Metadata } from "next";
+import ProjectsGrid from "./projects-grid";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -15,13 +16,13 @@ export const metadata: Metadata = {
 export default async function page() {
   return (
     <Move pathN="/languages">
-      <div className="lg:container lg:mx-auto lg:px-24 px-4 h-screen">
-        <Projects />
-        <Navigator
+      <div className="lg:container lg:mx-auto lg:px-4 h-screen">
+        <ProjectsGrid />
+        {/* <Navigator
           text="Programming Languages"
           url="/languages"
           className="hidden"
-        />
+        /> */}
       </div>
     </Move>
   );

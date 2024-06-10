@@ -18,7 +18,7 @@ export default function page() {
     <Move pathN="/blog">
       <div className="lg:container lg:mx-auto lg:px-24 px-4 h-screen">
         <Frameworks />
-        <Navigator text="Blog" url="/blog" />
+        {/* <Navigator text="Blog" url="/blog" /> */}
       </div>
     </Move>
   );

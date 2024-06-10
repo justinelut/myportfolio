@@ -103,7 +103,7 @@ export default function page() {
             
           </div>
         </div>
-        <Navigator text="Projects" url="/projects" />
+        {/* <Navigator text="Projects" url="/projects" /> */}
       </div>
     </Move>
   );
