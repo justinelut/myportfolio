@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <div className="lg:container lg:mx-auto px-4 lg:px-24 h-screen">
+    <div className="lg:container lg:mx-auto px-4 lg:px-24">
       <Contact />
       {/* <Navigator text="Home" url="/" /> */}
     </div>

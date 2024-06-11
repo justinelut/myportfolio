@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <>
       <Move pathN="/intro">
-        <div className="items-center grid lg:grid-cols-2 gap-x-10 grid-cols-1 justify-center px-16 pt-10 max-md:px-5 h-screen">
+        <div className="items-center grid lg:grid-cols-2 gap-x-10 grid-cols-1 justify-center px-16 pt-10 max-md:px-5">
           <div className="flex w-full max-w-[960px] flex-col mt-6 mb-10 items-start max-md:max-w-full max-md:mb-10">
             <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
               <div className="text-3xl self-stretch grow whitespace-nowrap">
