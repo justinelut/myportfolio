@@ -88,7 +88,7 @@ export function MainMenu() {
           >
         <YoutubeVideo video_id="caPz8mB5rwU" />
         </motion.div>
-        <div className="flex flex-col lg:items-end justify-center pb-20 pt-6  text-white pr-10 gap-y-10">
+        <div className="flex flex-col lg:items-end justify-center pb-20 pt-4 text-white pr-10 gap-y-8">
           {links &&
             links.map((link, index) => (
               <Link

@@ -73,7 +73,7 @@ export default function MainLayout({
     <html lang="en">
       <body key={pathname} className={leaguspatan.className}>
         <QueryProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <AnimatePresence mode="wait">
               <motion.div key={pathname}>
                 <motion.div
