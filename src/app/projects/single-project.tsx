@@ -16,7 +16,7 @@ export default function SingleProject({
   image,
 }: ServiceHomeProp) {
   return (
-    <div className="relative rounded-3xl h-[600px] overflow-hidden flex flex-col lg:px-14 pb-10 px-4">
+    <div className="relative rounded-3xl h-[600px] overflow-hidden flex flex-col lg:px-6 pb-10 px-4">
       {/* Background Image */}
       <img
         alt={title}
@@ -24,7 +24,7 @@ export default function SingleProject({
         className="absolute inset-0 w-full h-full object-cover"
       />
       {/* Overlay */}
-      <div className="absolute inset-0 bg-stone-800 bg-opacity-90"></div>
+      <div className="absolute inset-0 bg-stone-800 bg-opacity-80"></div>
 
       <div className="flex-grow flex flex-col justify-end relative z-10">
         <h3 className="text-4xl font-bold text-white">{title}</h3>

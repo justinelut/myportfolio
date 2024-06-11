@@ -10,7 +10,7 @@ export default async function ProjectsGrid() {
   // });
 
   const unsortedprojects = await getAllPostsMeta();
-  const projects = unsortedprojects.sort((a, b) => a.id - b.id);
+  const projects = unsortedprojects.sort((a, b) => b.id - a.id);
 
   return (
     <div>

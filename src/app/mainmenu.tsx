@@ -86,7 +86,7 @@ export function MainMenu() {
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="text-2xl leading-8 max-w-full w-[100%] max-md:mt-0"
           >
-        <YoutubeVideo video_id="hlwlM4a5rxg" />
+        <YoutubeVideo video_id="caPz8mB5rwU" />
         </motion.div>
         <div className="flex flex-col lg:items-end justify-center pb-20 pt-6  text-white pr-10 gap-y-10">
           {links &&

@@ -5,7 +5,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ProfileCard } from "@/components/profilecard";
 import { MenuCard } from "@/components/menucard";
-import Navigation from "@/components/navigation";
 import { AnimatePresence, Spring, motion } from "framer-motion";
 import { MobileMenu } from "@/components/mobilemenu";
 import TopNav from "@/components/header/topnav";
@@ -26,6 +25,7 @@ import Link from "next/link";
 import QueryProvider from "@/app/query-provider";
 import { MainMenu } from "./mainmenu";
 import Image from "next/image";
+import MainNavigation from "./navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({ subsets: ["vietnamese"] });
@@ -45,7 +45,7 @@ export default function MainLayout({
   };
 
   const transitionColor = "rgb(221, 107, 32, 0.9)";
-  const [open, setOpen] = useState<Boolean>(false);
+
   const animate = (variants: any) => {
     return {
       initial: "initial",
@@ -90,43 +90,10 @@ export default function MainLayout({
                   {...animate(slide)}
                 />
               </motion.div>
-              <div className="bg-white dark:bg-slate-950 sticky top-0 z-50 flex items-center justify-between">
-                <div className="lg:pl-10 pl-6">
-                  <Link href="/">
-                    <Image
-                      src="/logo.png"
-                      width={1000}
-                      height={1000}
-                      alt="Logo"
-                      className="lg:scale-50 lg:w-[30%] w-[40%]"
-                    />
-                  </Link>
-                </div>
-
-                <div className="container w-full mx-auto flex items-center justify-end py-10 gap-6 ">
-                 
-                    <ModeToggle />
-                  
-
-                  <MainMenu />
-
-                  <AnimatePresence>
-                    {open && (
-                      <motion.nav
-                        initial={{ x: "100%" }}
-                        animate={{ x: 0 }}
-                        exit={{ x: "100%" }}
-                        transition={{ duration: 0.3 }}
-                        className="lg:w-1/3 md:w-1/3 w-full right-0 top-0 h-dvh z-20 py-28 fixed border-l bg-white dark:bg-slate-800 shadow-slate-500 shadow-lg"
-                      >
-                        <MenuCard />
-                      </motion.nav>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </div>
-
+              <MainNavigation />
+              <div className="min-h-screen">
               {children}
+              </div>
               <div className="lg:mt-0 mt-10"></div>
             </AnimatePresence>
           </ThemeProvider>

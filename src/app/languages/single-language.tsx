@@ -51,7 +51,7 @@ const placeholderText: {
 
 export default function SingleLanguage() {
   return (
-    <div className="lg:px-10 grid lg:grid-cols-2 lg:pt-20 grid-cols-1 gap-6 items-center justify-center">
+    <div className="lg:px-10 grid lg:grid-cols-2 lg:pt-20 grid-cols-1 gap-6 items-center justify-center h-screen">
       <AnimatedComponent
         animationType="slide"
         direction="right"

@@ -1,3 +1,5 @@
+const { withNextVideo } = require('next-video/process')
+
 /** @type {import('next').NextConfig} */
 const withMDX = require('@next/mdx')()
 const nextConfig = {
@@ -27,5 +29,3 @@ const nextConfig = {
 }
 
 module.exports = withMDX(nextConfig)
-
-

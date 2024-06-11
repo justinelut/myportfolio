@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <>
       <Move pathN="/intro">
-        <div className="items-center grid lg:grid-cols-2 gap-x-10 grid-cols-1 justify-center px-16 pt-10 max-md:px-5">
+        <div className="items-center grid lg:grid-cols-2 gap-x-10 grid-cols-1 justify-center px-16 pt-10 max-md:px-5 h-screen">
           <div className="flex w-full max-w-[960px] flex-col mt-6 mb-10 items-start max-md:max-w-full max-md:mb-10">
             <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
               <div className="text-3xl self-stretch grow whitespace-nowrap">
@@ -63,7 +63,7 @@ export default function Home() {
               </div>
             </span>
 
-            <div className=" text-7xl text-balance mt-32  text-gradient_orange-green  font-urban lg:text-5xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-[66px]">Justine Gichana</div>
+            <div className=" text-7xl text-balance mt-32  text-gradient_orange-green  font-urban lg:text-5xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-[70px]">Justine Gichana</div>
 
             <div className="self-stretch text-5xl mt-6 max-md:max-w-full max-md:text-4xl">
               <div className="text-balance font-urban lg:text-4xl text-4xl text-gradient_orange-green font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-[66px]"><TypingEffect text={title} /></div>
@@ -97,7 +97,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="text-2xl leading-8 max-w-full w-[100%] max-md:mt-0"
           >
-           <YoutubeVideo video_id="kghwFYOJiNg" />
+           <YoutubeVideo video_id="caPz8mB5rwU" />
           </motion.div>
         </div>
       </Move>
