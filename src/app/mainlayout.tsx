@@ -91,9 +91,9 @@ export default function MainLayout({
                 />
               </motion.div>
               <MainNavigation />
-             
+             <div className="min-h-screen">
               {children}
-             
+             </div>
               <div className="lg:mt-0 mt-10"></div>
             </AnimatePresence>
           </ThemeProvider>

@@ -35,6 +35,7 @@
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.2.1",
     "next-video": "^1.1.0",
+    "plaiceholder": "^3.0.0",
     "pocketbase": "^0.20.3",
     "pocketbase-typegen": "^1.2.1",
     "react": "^18",

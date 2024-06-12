@@ -1,6 +1,9 @@
+import getBase64 from "@/lib/getblurredimage";
 import { ArrowUpRight, Plus } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
 
 interface ServiceHomeProp {
   url: string;
@@ -9,18 +12,24 @@ interface ServiceHomeProp {
   image: string;
 }
 
-export default function SingleProject({
+export default async function SingleProject({
   url,
   title,
   slug,
   image,
 }: ServiceHomeProp) {
+  const myBlurDataUrl = await getBase64(image)
+
   return (
     <div className="relative rounded-3xl h-[600px] overflow-hidden flex flex-col lg:px-6 pb-10 px-4">
       {/* Background Image */}
-      <img
+      <Image
         alt={title}
         src={image}
+        height={1000}
+        width={1000}
+        placeholder='blur'
+        blurDataURL={myBlurDataUrl}
         className="absolute inset-0 w-full h-full object-cover"
       />
       {/* Overlay */}

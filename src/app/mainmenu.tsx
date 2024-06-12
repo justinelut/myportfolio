@@ -23,6 +23,7 @@ import {
 import Link from "next/link";
 import YoutubeVideo from "./videos/youtube-video";
 import { AnimatePresence, Spring, motion } from "framer-motion";
+import OrbitingLangFramework from "./orbiter";
 
 const links = [
   {
@@ -86,7 +87,9 @@ export function MainMenu() {
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="text-2xl leading-8 max-w-full w-[100%] max-md:mt-0"
           >
-        <YoutubeVideo video_id="caPz8mB5rwU" />
+       <div className="lg:flex hidden">
+        {/* <OrbitingLangFramework /> */}
+       </div>
         </motion.div>
         <div className="flex flex-col lg:items-end justify-center pb-20 pt-4 text-white pr-10 gap-y-8">
           {links &&
