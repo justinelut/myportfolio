@@ -14,7 +14,9 @@ export default async function ProjectsGrid() {
 
   return (
     <div>
-      <div className="grid lg:grid-cols-3 grid-cols-1 pb-4 lg:px-24 gap-6">
+      
+      <div className="grid lg:grid-cols-3 grid-cols-1 pb-4 gap-6">
+        
         {projects &&
           projects.slice(0, 2).map((project, index) => (
             <div
@@ -31,7 +33,7 @@ export default async function ProjectsGrid() {
           ))}
       </div>
 
-      <div className="grid lg:grid-cols-3 pt-4 grid-cols-1 lg:px-24 gap-6">
+      <div className="grid lg:grid-cols-3 pt-4 grid-cols-1 gap-6">
         {projects &&
           projects.slice(2, 4).map((project, index) => (
             <div

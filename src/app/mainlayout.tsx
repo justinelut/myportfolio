@@ -26,6 +26,7 @@ import QueryProvider from "@/app/query-provider";
 import { MainMenu } from "./mainmenu";
 import Image from "next/image";
 import MainNavigation from "./navigation";
+import Footer from "./footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({ subsets: ["vietnamese"] });
@@ -70,12 +71,12 @@ export default function MainLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body key={pathname} className={leaguspatan.className}>
         <QueryProvider>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <AnimatePresence mode="wait">
-              <motion.div key={pathname}>
+              {/* <motion.div key={pathname}>
                 <motion.div
                   key={pathname}
                   style={{
@@ -89,12 +90,14 @@ export default function MainLayout({
                   transition={transitionSpringPhysics}
                   {...animate(slide)}
                 />
-              </motion.div>
+              </motion.div> */}
               <MainNavigation />
-             <div className="min-h-screen">
+             <div className="lg:container lg:mx-auto lg:max-w-7xl pt-4 px-4 pb-[50px]">
               {children}
+              <Footer />
+              
              </div>
-              <div className="lg:mt-0 mt-10"></div>
+             
             </AnimatePresence>
           </ThemeProvider>
         </QueryProvider>

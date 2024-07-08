@@ -11,13 +11,12 @@ export const metadata:Metadata = {
 };
 
 
-export default function page() {
+export default function ProgrammingLanguages() {
   return (
-    <Move pathN="/frameworks">
-      <div className="lg:container lg:mx-auto lg:px-24 px-4">
+   
+      <div id="languages">
         <SingleLanguage />
-        {/* <Navigator text="Frameworks" url="/frameworks" /> */}
       </div>
-    </Move>
+  
   );
 }

@@ -13,17 +13,11 @@ export const metadata: Metadata = {
     "Justine G, projects, portfolio, frontend development, React, Next.js, Tailwind CSS",
 };
 
-export default async function page() {
+export default async function MainProjects() {
   return (
-    <Move pathN="/languages">
-      <div className="lg:container lg:mx-auto lg:px-4 h-screen">
-        <ProjectsGrid />
-        {/* <Navigator
-          text="Programming Languages"
-          url="/languages"
-          className="hidden"
-        /> */}
-      </div>
-    </Move>
+    <div id="projects">
+     
+      <ProjectsGrid />
+    </div>
   );
 }

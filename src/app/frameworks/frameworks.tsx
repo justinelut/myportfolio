@@ -17,6 +17,7 @@ export default function Frameworks() {
   }[] = [{ key: 1, type: "heading1", text: "Nextjs" }];
   return (
     <div className="flex lg:flex-row flex-col gap-10">
+      
       <div className="flex flex-col lg:w-[45%] w-full gap-y-4 h-[600px]">
         <div className="w-full bg-slate-200 lg:h-[100px] px-8 flex lg:flex-row flex-col gap-10 rounded-3xl items-center justify-start">
           <Stripe className="size-52" />

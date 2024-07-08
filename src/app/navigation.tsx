@@ -10,7 +10,7 @@ import { MenuCard } from "@/components/menucard";
 export default function MainNavigation() {
   const [open, setOpen] = useState<Boolean>(false);
   return (
-    <div className="bg-white dark:bg-slate-950 sticky top-0 z-50 flex items-center justify-between">
+    <div className=" dark:lg:bg-stone-900 lg:bg-white bg-transparent rounded-full opacity-85 sticky top-4 z-50 flex items-center justify-between lg:container lg:mx-auto lg:max-w-7xl">
       <div className="lg:pl-10 pl-6">
         <Link href="/">
           <Image

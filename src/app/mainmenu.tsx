@@ -24,40 +24,41 @@ import Link from "next/link";
 import YoutubeVideo from "./videos/youtube-video";
 import { AnimatePresence, Spring, motion } from "framer-motion";
 import OrbitingLangFramework from "./orbiter";
+import { useState } from "react";
 
 const links = [
   {
-    link: "/intro",
+    link: "#intro",
     title: "About me",
     icon: FolderDot,
   },
   {
-    link: "/projects",
+    link: "#projects",
     title: "Projects",
     icon: FolderDot,
   },
   {
-    link: "/languages",
-    title: "P. Languages",
+    link: "#languages",
+    title: "Programming Languages",
     icon: FolderDot,
   },
   {
-    link: "/frameworks",
+    link: "#frameworks",
     title: "Frameworks",
     icon: ShieldCheck,
   },
   {
-    link: "/blog",
+    link: "#blog",
     title: "Blog",
     icon: BookCheck,
   },
   {
-    link: "/experience",
+    link: "#experience",
     title: "Experience",
     icon: NotepadText,
   },
   {
-    link: "/contact",
+    link: "#contact",
     title: "Contact",
     icon: CircleUser,
   },
@@ -68,9 +69,15 @@ export function MainMenu() {
     hidden: { opacity: 0, y: -40 },
     visible: { opacity: 1, y: 0 },
   };
+
+  const [open, setOpen] = useState<boolean>(false)
+
+  const HandleCloseMenu = () =>{
+      setOpen(false)
+  }
   return (
-    <Sheet>
-      <SheetTrigger asChild className="text-white">
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger className="text-white">
         <Button
           variant="outline"
           className="bg-orange-600 rounded-full p-6 text-white"
@@ -97,6 +104,7 @@ export function MainMenu() {
               <Link
                 href={`${link.link}`}
                 key={index}
+                onClick={HandleCloseMenu}
                 className="text-4xl hover:underline  flex items-center justify-between gap-x-10 gap-y-10"
               >
                 <h3>{link?.title}</h3>

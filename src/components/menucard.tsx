@@ -61,6 +61,7 @@ export const MenuCard = () => {
         >
           <Link href={link.link}>
             <div
+            id={link.link}
               className={`flex flex-row justify-between gap-6 items-center py-4 border-b hover:border-b-red-600 transition duration-300 ${
                 pathname == link.link ? "border-b-red-600" : ""
               }`}

@@ -17,7 +17,7 @@ export default function Contact() {
     text: string;
   }[] = [{ key: 1, type: "heading1", text: "Gihub" }];
   return (
-    <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-4 h-screen items-center justify-center">
+    <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-4 items-center justify-center">
       <div className="h-[600px] w-full flex flex-col gap-4">
         <div className="h-[200px] w-full grid lg:grid-cols-2 grid-cols-1 gap-4">
           <div className="bg-slate-800 w-full h-[100%] gap-x-4 flex items-center px-4 py-2 rounded-3xl">
