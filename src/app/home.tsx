@@ -67,7 +67,7 @@ export default function Home() {
             Justine Gichana
           </div>
 
-          <div className="font-urban lg:text-4xl text-4xl text-gradient_orange-green font-extrabold sm:text-4xl md:text-5xl ">
+          <div className="font-urban lg:text-4xl text-3xl text-gradient_orange-green font-extrabold sm:text-4xl md:text-5xl ">
             <TypingEffect text={title} />
           </div>
 
