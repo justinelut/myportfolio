@@ -48,9 +48,9 @@ export default function Home() {
   return (
     <>
       <div className="items-center grid lg:grid-cols-1 gap-x-10 grid-cols-1 justify-center px-16 pt-10 max-md:px-5 lg:pb-20">
-        <div className="relative h-full w-full bg-slate-950">
-          <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
-          <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
+        <div className="relative h-full w-full bg-slate-950 flex lg:flex-row flex-col items-center justify-center">
+          <div className="absolute bottom-0 lg:left-[-20%] lg:right-0 lg:blur-[0] blur-[100px] top-[-10%] h-[500px] lg:w-[500px] w-[100%] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
+          <div className="absolute bottom-0 lg:right-[-20%] top-[-10%] h-[500px] lg:w-[500px] lg:flex hidden rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
         </div>
         <div className="flex w-full flex-col mt-6 mb-10 items-center max-md:max-w-full max-md:mb-10">
           <span className="items-center flex gap-4 max-md:max-w-full max-md:flex-wrap">
