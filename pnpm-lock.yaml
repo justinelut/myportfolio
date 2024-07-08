@@ -107,6 +107,9 @@ importers:
       react-pdf:
         specifier: ^7.7.0
         version: 7.7.0(@types/react@18.2.47)(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-use-scroll:
+        specifier: ^1.0.3
+        version: 1.0.3
       react-wrap-balancer:
         specifier: ^1.1.1
         version: 1.1.1(react@18.2.0)
@@ -4535,10 +4538,17 @@ packages:
       '@types/react':
         optional: true
 
+  react-use-scroll@1.0.3:
+    resolution: {integrity: sha512-BWa3gnyv8il+LH/Llc5uTPrKA4rR4nSFmF/etyqd7lhlox9gva8JMgjOYpPPO79Z0LsP87we+uEGqqut/YWetA==}
+
   react-wrap-balancer@1.1.1:
     resolution: {integrity: sha512-AB+l7FPRWl6uZ28VcJ8skkwLn2+UC62bjiw8tQUrZPlEWDVnR9MG0lghyn7EyxuJSsFEpht4G+yh2WikEqQ/5Q==}
     peerDependencies:
       react: '>=16.8.0 || ^17.0.0 || ^18'
+
+  react@16.14.0:
+    resolution: {integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==}
+    engines: {node: '>=0.10.0'}
 
   react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
@@ -11189,9 +11199,19 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.2.47
 
+  react-use-scroll@1.0.3:
+    dependencies:
+      react: 16.14.0
+
   react-wrap-balancer@1.1.1(react@18.2.0):
     dependencies:
       react: 18.2.0
+
+  react@16.14.0:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.8.1
 
   react@18.2.0:
     dependencies:

@@ -20,11 +20,18 @@ const FadeInSection: React.FC<FadeInSectionProps> = ({ children }) => {
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
+    let ticking = false;
 
     const updateScrollDirection = () => {
-      const scrollY = window.scrollY;
-      setScrollDirection(scrollY > lastScrollY ? "down" : "up");
-      lastScrollY = scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          setScrollDirection(scrollY > lastScrollY ? "down" : "up");
+          lastScrollY = scrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", updateScrollDirection);
