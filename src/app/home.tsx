@@ -73,7 +73,7 @@ export default function Home() {
 
           <div className="flex lg:flex-row flex-col lg:justify-start gap-x-10 lg:items-center">
             <Link
-              href={"#about-me"}
+              href={"#intro"}
               className="items-center  lg:w-full min-w-dvw text-xl mt-10 px-8 py-4 dark:bg-white rounded-full dark:text-black text-white font-extrabold bg-orange-600 grow flex gap-4"
             >
               <span>About me</span>
