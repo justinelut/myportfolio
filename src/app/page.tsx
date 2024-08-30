@@ -13,7 +13,7 @@ import FadeInSection from "./fade-inview";
 import FeaturedProjects from "./featured-projects/featured-projects";
 
 export const metadata: Metadata = {
-  title: "Justine Gichana",
+  title: "Justine Gichana - Portfolio",
   description:
     "Hi there! I'm Justine G, a passionate frontend developer specializing in React, Next.js, and Tailwind CSS. Check out my work and get to know my journey in web development.",
   keywords:
