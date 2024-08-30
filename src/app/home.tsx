@@ -13,7 +13,7 @@ import AnimatedComponent from "./animate-component";
 import YoutubeVideo from "./videos/youtube-video";
 
 export default function Home() {
-  const title = "Frontend Developer";
+  const title = "Fullstack web Developer";
 
   const [replay, setReplay] = React.useState(true);
   // Placeholder text data, as if from API

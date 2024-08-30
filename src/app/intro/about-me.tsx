@@ -23,8 +23,7 @@ export const metadata: Metadata = {
 export default function AboutMe() {
   return (
     <div className="text-5xl mx-auto container max-w-3xl text-center text-transparent bg-clip-text bg-gradient-to-br from-orange-600 to-green-600 font-bold mt-4 self-stretch max-md:max-w-full max-md:text-4xl max-md:mt-10">
-     
-      <TypingEffect text="I am a Fronted web developer, who loves loves to build engaging and modern websites" />
+      <TypingEffect text="I am a Full stack web developer, who loves loves to build engaging and modern websites" />
     </div>
   );
 }

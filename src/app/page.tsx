@@ -10,6 +10,7 @@ import Experience from "./experience/experience";
 import Contact from "./contact/contact";
 import { HeadingGradient } from "./heading";
 import FadeInSection from "./fade-inview";
+import FeaturedProjects from "./featured-projects/featured-projects";
 
 export const metadata: Metadata = {
   title: "Justine Gichana",
@@ -41,6 +42,9 @@ export default function page() {
         <FadeInSection>
           <AboutMe />
         </FadeInSection>
+      </div>
+      <div id="projects" className="lg:mt-32 mt-10 mb-10">
+        <FeaturedProjects />
       </div>
       <div id="projects" className="lg:mt-32 mt-10 mb-10">
         <FadeInSection>
