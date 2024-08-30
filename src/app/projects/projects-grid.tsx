@@ -35,7 +35,7 @@ export default async function ProjectsGrid() {
 
       <div className="grid lg:grid-cols-3 pt-4 grid-cols-1 gap-6">
         {projects &&
-          projects.slice(2, 4).map((project, index) => (
+          projects.slice(2, 4).reverse().map((project, index) => (
             <div
               key={index}
               className={index === 0 ? "lg:col-span-2" : "col-span-1"}

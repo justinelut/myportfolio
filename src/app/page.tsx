@@ -44,11 +44,14 @@ export default function page() {
         </FadeInSection>
       </div>
       <div id="projects" className="lg:mt-32 mt-10 mb-10">
+      <FadeInSection>
+          <HeadingGradient>Featured projects</HeadingGradient>
+        </FadeInSection>
         <FeaturedProjects />
       </div>
       <div id="projects" className="lg:mt-32 mt-10 mb-10">
         <FadeInSection>
-          <HeadingGradient>Some of my projects</HeadingGradient>
+          <HeadingGradient>Other projects</HeadingGradient>
         </FadeInSection>
         <FadeInSection>
           <MainProjects />

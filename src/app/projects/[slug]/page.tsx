@@ -35,7 +35,7 @@ const Page = async ({ params }: PageProps) => {
   const { meta } = await getPageContent(params.slug);
 
   return (
-    <div className="container mx-auto max-w-6xl flex flex-col items-center">
+    <div className="lg:container mx-auto lg:max-w-7xl flex flex-col items-center">
       {meta.image && (
         <Image
           src={meta.image}

@@ -8,10 +8,13 @@ import { buttonVariants } from "@/components/ui/button";
 import Nextjs from "@/app/icons/nextjs";
 import Pocketbase from "@/app/icons/pocketbase";
 import TailwindCSS from "@/app/icons/tailwind";
+import Supabase from "@/app/icons/supabase";
+import TypeScript from "@/app/icons/typescript";
  
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    ...components,
+    TypeScript,
+    Supabase,
     Link,
     Image,
     Check,
@@ -20,6 +23,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     Nextjs,
     Pocketbase,
     Search,
-    TailwindCSS
+    TailwindCSS,
+    ...components,
   }
 }
