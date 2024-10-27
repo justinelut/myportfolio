@@ -58,7 +58,7 @@ export default function SingleLanguage() {
         duration={0.3}
         delay={0.5}
       >
-        <div className="lg:h-[500px] relative bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/y041ka7n063gvm8/typescript_TWfjLMIhpp.svg?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
+        <div className="lg:h-[500px] relative bg-[url('https://api2.pixeldesign.site/api/files/bs6ha7egdp060nv/y041ka7n063gvm8/typescript_TWfjLMIhpp.svg?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
           <div className="absolute inset-0 bg-slate-700 bg-opacity-50 rounded-3xl"></div>
           <div className="flex flex-col gap-y-2 relative dark:text-slate-900">
             <div className="flex items-start">

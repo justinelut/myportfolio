@@ -11,6 +11,7 @@ import Contact from "./contact/contact";
 import { HeadingGradient } from "./heading";
 import FadeInSection from "./fade-inview";
 import FeaturedProjects from "./featured-projects/featured-projects";
+import { unstable_noStore } from "next/cache";
 
 export const metadata: Metadata = {
   title: "Justine Gichana - Portfolio",
@@ -20,12 +21,13 @@ export const metadata: Metadata = {
     "Justine G, web developer, React, Next.js, Tailwind CSS, web development, portfolio",
   openGraph: {
     images: [
-      "https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/mxbwu49exadjgpm/portrait_1_tPet10eAvs.webp?token=",
+      "https://api2.pixeldesign.site/api/files/bs6ha7egdp060nv/mxbwu49exadjgpm/portrait_1_tPet10eAvs.webp?token=",
     ],
   },
 };
 
 export default function page() {
+  unstable_noStore()
   return (
     <div>
       <Home />
@@ -73,14 +75,14 @@ export default function page() {
           <Frameworks />
         </FadeInSection>
       </div>
-      <div id="blog" className="lg:mt-32 mt-10 mb-10">
+      {/* <div id="blog" className="lg:mt-32 mt-10 mb-10">
         <FadeInSection>
           <HeadingGradient>Latest blogs</HeadingGradient>
         </FadeInSection>
         <FadeInSection>
           <Blogs />
         </FadeInSection>
-      </div>
+      </div> */}
       <div id="experience" className="lg:mt-32 mt-10 mb-10">
         <FadeInSection>
           <HeadingGradient>My work experience</HeadingGradient>

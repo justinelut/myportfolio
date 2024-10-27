@@ -32,7 +32,7 @@ export default function Frameworks() {
           duration={0.3}
           delay={0.5}
         >
-          <div className="lg:h-[500px] h-full relative bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/cket277wy29q5go/nextjs_icon_dark_wZoDIbfcOV.png?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
+          <div className="lg:h-[500px] h-full relative bg-[url('https://api2.pixeldesign.site/api/files/bs6ha7egdp060nv/cket277wy29q5go/nextjs_icon_dark_wZoDIbfcOV.png?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
             <div className="absolute inset-0 bg-slate-300 h-[100%] bg-opacity-50 rounded-3xl "></div>
             <div className="flex flex-col gap-y-2 relative dark:text-slate-900">
               <div className="flex items-start">
@@ -60,7 +60,7 @@ export default function Frameworks() {
                 duration={0.3}
                 delay={0.5}
               >
-                <div className="relative lg:h-[180px] bg-[url('https://api2.pixelayout.site/api/files/bs6ha7egdp060nv/n0etw9h00dn6cfj/nextjs_icon_dark_2pQKwPgwlq.png?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
+                <div className="relative lg:h-[180px] bg-[url('https://api2.pixeldesign.site/api/files/bs6ha7egdp060nv/n0etw9h00dn6cfj/nextjs_icon_dark_2pQKwPgwlq.png?token=')] bg-cover bg-center  bg-opacity-50 p-8 rounded-3xl flex flex-col gap-y-6">
                   <div className="absolute inset-0 bg-slate-300 bg-opacity-50 rounded-3xl"></div>
                   <div className="flex flex-col gap-y-2 relative dark:text-slate-900">
                     <div className="flex items-start">

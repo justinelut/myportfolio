@@ -11,17 +11,17 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "api.pixelayout.site",
+        hostname: "api3.currentdigital.studio",
         port: "",
       },
       {
         protocol: "https",
-        hostname: "api2.pixelayout.site",
+        hostname: "api2.pixeldesign.site",
         port: "",
       },
       {
         protocol: "https",
-        hostname: "pixelayout.site",
+        hostname: "pixeldesign.site",
         port: "",
       },
     ],

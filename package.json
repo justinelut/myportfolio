@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pbtypegen": "pocketbase-typegen --url https://api.pixelayout.site --email justinequartz@gmail.com --password Ch%L$ea#1.Yv"
+    "pbtypegen": "pocketbase-typegen --url https://api3.currentdigital.studio --email justinequartz@gmail.com --password Ch%L$ea#1.Yv"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
